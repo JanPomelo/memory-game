@@ -1,9 +1,10 @@
 import "./App.css";
+import MemoryCard from "./components/MemoryCard";
 
 function App() {
   return (
     <>
-      <p>{import.meta.env.VITE_APP_TITLE}</p>
+      <MemoryCard />
     </>
   );
 }
