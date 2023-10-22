@@ -23,7 +23,11 @@ export default function MemoryCard() {
           <div className="imgGradient1"></div>
           <div className="imgGradient2"></div>
         </div>
-        <h3>{albon.strPlayer}</h3>
+        <hr></hr>
+        <h3 className="fNameDriver">{albon.strPlayer.substring(0, albon.strPlayer.indexOf(' '))}</h3>
+        <h3 className="lNameDriver">{albon.strPlayer.substring(albon.strPlayer.indexOf(' '))}</h3>
+        <div className="driversNameBG1"></div>
+        <div className="driversNameBG2"></div>
         <p>{albon.strNumber}</p>
       </div>
     </div>

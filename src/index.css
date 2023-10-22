@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -17,6 +18,7 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
   --memCardBG: black;
+  --memCardBorder: #ff0000;
 }
 
 a {
@@ -71,15 +73,18 @@ button:focus-visible {
   border-radius: 2rem;
   display: flex;
   overflow: hidden;
+  font-family: "Orbitron";
 }
 
 .memCard {
   background-color: black;
   color: white;
   border-radius: 2rem;
-  border: 5px solid #c0c0c0;
+  border: 5px solid var(--memCardBorder);
   padding: 1em 1em;
   background-color: var(--memCardBG);
+  position: relative;
+  overflow: hidden;
 }
 
 .imgWrapper {
@@ -91,8 +96,8 @@ button:focus-visible {
 .imgWrapper > img {
   width: 100%;
   aspect-ratio: 1;
-  border: 2px solid #c0c0c0;
-  border-radius: 2rem;
+  border-top-right-radius: 2rem;
+  border-top-left-radius: 2rem;
   background: repeating-linear-gradient(45deg, black 0, black 10%, black 0, transparent 50%),
     repeating-linear-gradient(135deg, black 0%, black 10%, black 0, transparent 50%);
   background-size: 2em 2em;
@@ -108,7 +113,6 @@ button:focus-visible {
   width: 50%;
   left: 0;
   border-top-left-radius: 2rem;
-  border-bottom-left-radius: 2rem;
 }
 
 .imgGradient2 {
@@ -118,7 +122,42 @@ button:focus-visible {
   width: 50%;
   right: 0;
   border-top-right-radius: 2rem;
-  border-bottom-right-radius: 2rem;
+}
+
+.fNameDriver,
+.lNameDriver {
+  font-weight: 800;
+  text-align: start;
+}
+
+.fNameDriver {
+  font-size: 1.5rem;
+}
+
+.lNameDriver {
+  color: var(--memCardBorder);
+  font-size: 2rem;
+}
+
+.driversNameBG1,
+.driversNameBG2 {
+  position: absolute;
+  background-color: var(--memCardBorder);
+}
+
+.driversNameBG1 {
+  width: 70%;
+  height: 5%;
+  left: 0;
+  bottom: 12.05%;
+}
+
+.driversNameBG2 {
+  height: 5%;
+  width: 40.5%;
+  transform: rotate(-30deg);
+  right: -6%;
+  bottom: 18.8%;
 }
 
 @media (prefers-color-scheme: light) {
