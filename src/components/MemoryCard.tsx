@@ -1,6 +1,7 @@
 "use strict";
 
 import { Driver } from "../types";
+//import { getDriverDetails } from "../apiCalls";
 
 const albon: Driver = {
   strNumber: "23",
@@ -10,13 +11,18 @@ const albon: Driver = {
   strCutout: "https://www.thesportsdb.com/images/media/player/cutout/2f73pc1679830795.png",
 };
 
-//const albon = await getDriverDetails({firstName: 'Alexander', lastName: 'Albon'}) as Driver;
+
+//const albon = await getDriverDetails({firstName: 'Charles', lastName: 'Leclerc'}) as Driver;
 
 export default function MemoryCard() {
   return (
     <div className="outerMemCard">
       <div className="memCard">
-        <img src={albon.strCutout} />
+        <div className="imgWrapper">
+          <img src={albon.strCutout} />
+          <div className="imgGradient1"></div>
+          <div className="imgGradient2"></div>
+        </div>
         <h3>{albon.strPlayer}</h3>
         <p>{albon.strNumber}</p>
       </div>

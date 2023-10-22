@@ -16,7 +16,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-  --memCardBG: #1a1a1a;
+  --memCardBG: black;
 }
 
 a {
@@ -69,21 +69,56 @@ button:focus-visible {
   aspect-ratio: 63/88;
   padding: 0.5rem;
   border-radius: 2rem;
+  display: flex;
+  overflow: hidden;
 }
 
 .memCard {
   background-color: black;
   color: white;
-  display: grid;
-  grid-template-rows: 3fr 1fr 1fr;
   border-radius: 2rem;
-  border: 5px solid red;
+  border: 5px solid #c0c0c0;
   padding: 1em 1em;
-  background-color: var(--memCardBG)
+  background-color: var(--memCardBG);
 }
 
-.memCard > img {
+.imgWrapper {
+  position: relative;
+  display: flex;
+  padding: 0;
+}
+
+.imgWrapper > img {
   width: 100%;
+  aspect-ratio: 1;
+  border: 2px solid #c0c0c0;
+  border-radius: 2rem;
+  background: repeating-linear-gradient(45deg, black 0, black 10%, black 0, transparent 50%),
+    repeating-linear-gradient(135deg, black 0%, black 10%, black 0, transparent 50%);
+  background-size: 2em 2em;
+  background-color: transparent;
+  opacity: 1;
+  z-index: 1;
+}
+
+.imgGradient1 {
+  background: linear-gradient(to left top, #03cef1, transparent);
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  left: 0;
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+}
+
+.imgGradient2 {
+  background: linear-gradient(to right top, #03cef1, transparent);
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  right: 0;
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
 }
 
 @media (prefers-color-scheme: light) {
