@@ -63,6 +63,28 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.outerMemCard {
+  background-color: #1a1a1a;
+  aspect-ratio: 63/88;
+  padding: 0.5rem;
+  border-radius: 2rem;
+}
+
+.memCard {
+  background-color: black;
+  color: white;
+  display: grid;
+  grid-template-rows: 3fr 1fr 1fr;
+  border-radius: 2rem;
+  border: 5px solid red;
+  padding: 1em 1em;
+  background-color: #1a1a1a;
+}
+
+.memCard > img {
+  width: 100%;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
