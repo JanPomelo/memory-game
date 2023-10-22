@@ -16,6 +16,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  --memCardBG: #1a1a1a;
 }
 
 a {
@@ -64,7 +65,7 @@ button:focus-visible {
 }
 
 .outerMemCard {
-  background-color: #1a1a1a;
+  background-color: var(--memCardBG);
   aspect-ratio: 63/88;
   padding: 0.5rem;
   border-radius: 2rem;
@@ -78,7 +79,7 @@ button:focus-visible {
   border-radius: 2rem;
   border: 5px solid red;
   padding: 1em 1em;
-  background-color: #1a1a1a;
+  background-color: var(--memCardBG)
 }
 
 .memCard > img {
