@@ -3,8 +3,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "F1Font";
+  src: url(./Formula1-Wide.otf);
+}
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'F1Font', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -73,7 +78,7 @@ button:focus-visible {
   border-radius: 2rem;
   display: flex;
   overflow: hidden;
-  font-family: "Orbitron";
+  font-family: "F1Font";
 }
 
 .memCard {
