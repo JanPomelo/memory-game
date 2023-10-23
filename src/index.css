@@ -142,12 +142,14 @@ button:focus-visible {
 }
 
 .fNameDriver {
-  font-size: 0.5rem;
+  font-size: 0.55rem;
 }
 
 .lNameDriver {
   color: var(--memCardBorder);
-  font-size: 0.7rem;
+  font-size: 0.65rem;
+  text-align: end;
+  margin-right: 3px;
 }
 
 .driversNameBG1,
@@ -159,23 +161,34 @@ button:focus-visible {
 .driversNameBG1 {
   width: 70%;
   height: 5%;
-  left: 0;
-  bottom: 10.05%;
+  right: 0;
+  bottom: 11.05%;
 }
 
 .driversNameBG2 {
   height: 5%;
-  width: 40.5%;
+  width: 40.8%;
   transform: rotate(-30deg);
-  right: -6%;
-  bottom: 16.8%;
+  left: -6%;
+  bottom: 4.3%;
 }
 
 .driverNumber {
   margin-top: 10%;
   font-size: 0.8rem;
   align-self: end;
-  margin-right: 5px;;
+  margin-right: 3px;
+}
+
+.f1Logo {
+  position: absolute;
+  background: url(./F1.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 2rem;
+  height: 1rem;
+  z-index: 2;
 }
 
 @media (prefers-color-scheme: light) {

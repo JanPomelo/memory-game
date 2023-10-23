@@ -12,13 +12,14 @@ const albon: Driver = {
 };
 
 
-//const albon = await getDriverDetails({firstName: 'Charles', lastName: 'Leclerc'}) as Driver;
+//const albon = await getDriverDetails({firstName: 'Max', lastName: 'Verstappen'}) as Driver;
 
 export default function MemoryCard() {
   return (
     <div className="outerMemCard">
       <div className="memCard">
         <div className="imgWrapper">
+          <div className="f1Logo"></div>
           <img src={albon.strCutout} />
           <div className="imgGradient1"></div>
           <div className="imgGradient2"></div>
