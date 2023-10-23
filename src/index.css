@@ -9,7 +9,7 @@
 }
 
 :root {
-  font-family: 'F1Font', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "F1Font", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -23,7 +23,8 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
   --memCardBG: black;
-  --memCardBorder: #ff0000;
+  --memCardBorder: #c0c0c0;
+  --memCardHighlight: #ff0000;
 }
 
 a {
@@ -135,6 +136,10 @@ button:focus-visible {
   border-top-right-radius: 0.5rem;
 }
 
+.memCard > hr {
+  border-color: var(--memCardBorder);
+}
+
 .fNameDriver,
 .lNameDriver {
   font-weight: 800;
@@ -146,7 +151,7 @@ button:focus-visible {
 }
 
 .lNameDriver {
-  color: var(--memCardBorder);
+  color: var(--memCardHighlight);
   font-size: 0.65rem;
   text-align: end;
   margin-right: 3px;
@@ -155,7 +160,7 @@ button:focus-visible {
 .driversNameBG1,
 .driversNameBG2 {
   position: absolute;
-  background-color: var(--memCardBorder);
+  background-color: var(--memCardHighlight);
 }
 
 .driversNameBG1 {
