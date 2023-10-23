@@ -74,22 +74,28 @@ button:focus-visible {
 .outerMemCard {
   background-color: var(--memCardBG);
   aspect-ratio: 63/88;
-  padding: 0.5rem;
-  border-radius: 2rem;
+  padding: 0.2rem;
+  border-radius: 1rem;
   display: flex;
   overflow: hidden;
   font-family: "F1Font";
+  max-width: 150px;
+  display: flex;
+  flex-direction: column;
 }
 
 .memCard {
   background-color: black;
   color: white;
-  border-radius: 2rem;
-  border: 5px solid var(--memCardBorder);
-  padding: 1em 1em;
+  border-radius: 1rem;
+  border: 3px solid var(--memCardBorder);
+  padding: 0.2em 0.2em;
   background-color: var(--memCardBG);
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .imgWrapper {
@@ -101,11 +107,11 @@ button:focus-visible {
 .imgWrapper > img {
   width: 100%;
   aspect-ratio: 1;
-  border-top-right-radius: 2rem;
-  border-top-left-radius: 2rem;
+  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
   background: repeating-linear-gradient(45deg, black 0, black 10%, black 0, transparent 50%),
     repeating-linear-gradient(135deg, black 0%, black 10%, black 0, transparent 50%);
-  background-size: 2em 2em;
+  background-size: 1em 1em;
   background-color: transparent;
   opacity: 1;
   z-index: 1;
@@ -117,7 +123,7 @@ button:focus-visible {
   height: 100%;
   width: 50%;
   left: 0;
-  border-top-left-radius: 2rem;
+  border-top-left-radius: 0.5rem;
 }
 
 .imgGradient2 {
@@ -126,7 +132,7 @@ button:focus-visible {
   height: 100%;
   width: 50%;
   right: 0;
-  border-top-right-radius: 2rem;
+  border-top-right-radius: 0.5rem;
 }
 
 .fNameDriver,
@@ -136,12 +142,12 @@ button:focus-visible {
 }
 
 .fNameDriver {
-  font-size: 1.5rem;
+  font-size: 0.5rem;
 }
 
 .lNameDriver {
   color: var(--memCardBorder);
-  font-size: 2rem;
+  font-size: 0.7rem;
 }
 
 .driversNameBG1,
@@ -154,7 +160,7 @@ button:focus-visible {
   width: 70%;
   height: 5%;
   left: 0;
-  bottom: 12.05%;
+  bottom: 10.05%;
 }
 
 .driversNameBG2 {
@@ -162,7 +168,14 @@ button:focus-visible {
   width: 40.5%;
   transform: rotate(-30deg);
   right: -6%;
-  bottom: 18.8%;
+  bottom: 16.8%;
+}
+
+.driverNumber {
+  margin-top: 10%;
+  font-size: 0.8rem;
+  align-self: end;
+  margin-right: 5px;;
 }
 
 @media (prefers-color-scheme: light) {

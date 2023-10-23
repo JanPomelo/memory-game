@@ -28,7 +28,7 @@ export default function MemoryCard() {
         <h3 className="lNameDriver">{albon.strPlayer.substring(albon.strPlayer.indexOf(' '))}</h3>
         <div className="driversNameBG1"></div>
         <div className="driversNameBG2"></div>
-        <p>{albon.strNumber}</p>
+        <p className="driverNumber">{albon.strNumber}</p>
       </div>
     </div>
   );
