@@ -11,6 +11,7 @@ export async function getDriverDetails(name: { firstName: string, lastName: stri
       throw new Error("HTTP Status Code: " + response.status);
     }
     const data = await response.json();
+    //console.log(data);
     return data.player[0] as Driver;
   } catch (err) {
     console.log("Can't get the data." + err);

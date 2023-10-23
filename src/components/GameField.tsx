@@ -1,21 +1,19 @@
 //import { getDriverDetails } from "../apiCalls";
+//import { v4 } from "uuid";
 import { fakeDrivers } from "../drivers";
 import MemoryCard from "./MemoryCard";
-
+//import { getDriverDetails } from "../apiCalls";
 /*
 async function getAllDetails(driverArr: { firstName: string; lastName: string }[]) {
   const allDriverDetails: Driver[] = [];
   for (let i = 0; i < driverArr.length; i++) {
-    //const driverInfos = await getDriverDetails({ firstName: driverArr[i].firstName, lastName: driverArr[i].lastName });
-    //driverInfos.id = uuidv4();
-    //allDriverDetails.push(driverInfos!);
-    allDriverDetails.push(albon);
+    const driverInfos = await getDriverDetails({ firstName: driverArr[i].firstName, lastName: driverArr[i].lastName });
+    driverInfos!.id = v4();
+    allDriverDetails.push(driverInfos!);
   }
-  //allDriverDetails.push(albon);
   return allDriverDetails;
 }
 */
-
 const allDetails = fakeDrivers;
 
 const GameField = () => {
