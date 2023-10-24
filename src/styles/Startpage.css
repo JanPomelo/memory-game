@@ -31,8 +31,18 @@ if it's not present, don't show loader */
 }
 
 button {
-  overflow: hidden;
+  overflow: hidden;           
+  padding: 0.5rem !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 1rem;
+  transition: background-color 0.3s ease;
+  transition: color 0.3s ease;
+  background-color: white;
 }
+
+
 
 .tyreButton {
   background-color: black;
@@ -179,9 +189,28 @@ button {
   background-color: black;
 }
 
-button:hover .tyreButton, button:focus .tyreButton     {
+button:hover .tyreButton,
+button:focus .tyreButton {
   animation-name: runTyre;
   animation-timing-function: linear;
+}
+
+button:active .tyreButton {
+  animation-name: runTyre;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
+}
+
+button:active {
+  box-shadow: 0px 0px 2px 1px black;
+}
+
+
+button:hover,
+button:focus {
+  outline: none;
+    background-color: #69666a;
+    color: white;
 }
 
 @keyframes runTyre {

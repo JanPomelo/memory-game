@@ -32,7 +32,7 @@ const StartScreen = () => {
           <div className="flex flex-col bg-white p-2 rounded-2xl border-2 border-black">
             <h2 className="text-lg">Welcome to F1 Memory Card Game!</h2>
             <p>Choose the Difficulty</p>
-            <div className="flex justify-around">
+            <div className="flex justify-around gap-2    ">
               <button>
                 <div className="tyreButton">
                   <div className="tyreText softTyre">
