@@ -31,7 +31,7 @@ if it's not present, don't show loader */
 }
 
 button {
-  overflow: hidden;           
+  overflow: hidden;
   padding: 0.5rem !important;
   display: flex;
   flex-direction: column;
@@ -40,9 +40,8 @@ button {
   transition: background-color 0.3s ease;
   transition: color 0.3s ease;
   background-color: white;
+  -webkit-tap-highlight-color: transparent;
 }
-
-
 
 .tyreButton {
   background-color: black;
@@ -205,12 +204,11 @@ button:active {
   box-shadow: 0px 0px 2px 1px black;
 }
 
-
 button:hover,
 button:focus {
   outline: none;
-    background-color: #69666a;
-    color: white;
+  background-color: #69666a;
+  color: white;
 }
 
 @keyframes runTyre {
