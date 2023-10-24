@@ -29,9 +29,77 @@ const StartScreen = () => {
     <>
       {loaded ? (
         <div className="flex flex-col justify-center items-center h-full">
-          <form className="flex flex-col bg-white p-2">
+          <form className="flex flex-col bg-white p-2 rounded-2xl border-2 border-black">
             <h2 className="text-lg">Welcome to F1 Memory Card Game!</h2>
             <p>Choose the Difficulty</p>
+            <div className="flex justify-around">
+              <button>
+                <div className="tyreButton">
+                  <div className="tyreText softTyre">
+                    <div className="rim">
+                      <div className="rimHoles">
+                        <div className="rimHoles2">
+                          <div className="yellowRing">
+                            <div className="whiteRing"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="rimHolesAbs">
+                        <div className="rimHoles2Abs"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="blackRimDiv1"></div>
+                  <div className="blackRimDiv2"></div>
+                </div>
+                Soft
+              </button>
+              <button>
+                <div className="tyreButton">
+                  <div className="tyreText mediumTyre">
+                    <div className="rim">
+                      <div className="rimHoles">
+                        <div className="rimHoles2">
+                          <div className="yellowRing">
+                            <div className="whiteRing"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="rimHolesAbs">
+                        <div className="rimHoles2Abs"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="blackRimDiv1"></div>
+                  <div className="blackRimDiv2"></div>
+                </div>
+                Medium
+              </button>
+              <button>
+                <div className="tyreButton">
+                  <div className="tyreText hardTyre">
+                    <div className="rim">
+                      <div className="rimHoles">
+                        <div className="rimHoles2">
+                          <div className="yellowRing">
+                            <div className="whiteRing"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="rimHolesAbs">
+                        <div className="rimHoles2Abs"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="blackRimDiv1"></div>
+                  <div className="blackRimDiv2"></div>
+                </div>
+                Hard
+              </button>
+            </div>
           </form>
         </div>
       ) : (

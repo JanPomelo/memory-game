@@ -30,3 +30,144 @@ if it's not present, don't show loader */
   background-size: contain;
 }
 
+.tyreButton {
+  background-color: black;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  border: 2px rgb(67, 67, 67) solid;
+  display: flex;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+.tyreText {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  justify-content: center;
+  background-color: transparent;
+  border-radius: 50%;
+  width: 74px;
+  height: 74px;
+}
+
+.softTyre {
+  border: red 2px solid;
+}
+
+.mediumTyre {
+  border: yellow 2px solid;
+}
+
+.hardTyre {
+  border: white 2px solid;
+}
+
+.blackRimDiv1 {
+  position: absolute;
+  bottom: 50%;
+  right: 50%;
+  transform: translate(0%, 100%);
+  height: 38px;
+  width: 38px;
+  border-radius: 0 0 0 40px;
+  background-color: transparent;
+  border-left: 8px solid black;
+  border-bottom: 8px solid black;
+}
+
+.blackRimDiv2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(0%, -100%);
+  height: 38px;
+  width: 38px;
+  border-radius: 0 40px 0 0;
+  background-color: transparent;
+  border-right: 8px solid black;
+  border-top: 8px solid black;
+}
+
+.rim {
+  width: 60px;
+  height: 60px;
+  background-color: rgb(49, 49, 49);
+  border-radius: 50%;
+  border: 2px solid rgb(119, 119, 119);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.rimHoles {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  border: dashed black 5.8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+.rimHoles2 {
+  border-radius: 50%;
+  width: 38.6px;
+  height: 38.6px;
+  border: dashed black 4.6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.rimHolesAbs {
+  position: absolute;
+  bottom: 50%;
+  right: 50%;
+  transform: translate(50%, 50%) rotate(5deg);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  border: dashed rgb(49, 49, 49) 5.8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+.rimHoles2Abs {
+  border-radius: 50%;
+  width: 38.6px;
+  height: 38.6px;
+  border: dashed rgb(49, 49, 49) 4.6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.yellowRing {
+  border: 2px yellow solid;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+.whiteRing {
+  border: 2px rgb(193, 192, 192) dashed;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: black;
+}
