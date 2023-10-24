@@ -13,6 +13,7 @@ export default {
         "mclaren-orange": "#ff8700",
         "ferrari-red": "#dc0000",
         "pure-yellow": "#ffff00",
+        asphalt: "#69666a",
       },
     },
   },
