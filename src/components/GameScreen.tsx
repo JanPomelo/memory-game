@@ -21,22 +21,30 @@ const GameScreen: React.FC<GameScreenProps> = ({ difficulty }) => {
     const arrSize: number = getCardArraySize(difficulty);
     const playArr: Driver[] = [];
     for (let i = 0; i < arrSize; i++) {
-      let alreadyIn = false;
       let driver: Driver;
+      let alreadyIn = false;
       do {
-        driver = fakeDrivers[Math.random() * 5];
+        alreadyIn = false;
+        driver = fakeDrivers[Math.floor(Math.random() * 20)];
         for (let j = 0; j < playArr.length; j++) {
           if (driver.strPlayer === playArr[j].strPlayer) {
             alreadyIn = true;
           }
         }
-      } while (!alreadyIn);
+      } while (alreadyIn);
       playArr.push(driver);
+      console.log(alreadyIn);
     }
     return playArr;
   }
 
-  return <GameField playArr={getPlayCards()}/>;
+  const playArr = getPlayCards();
+
+  return (
+    <>
+      <GameField playArr={playArr} />;
+    </>
+  );
 };
 
 export default GameScreen;
