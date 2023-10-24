@@ -40,11 +40,7 @@ const GameScreen: React.FC<GameScreenProps> = ({ difficulty }) => {
 
   const playArr = getPlayCards();
 
-  return (
-    <>
-      <GameField playArr={playArr} />;
-    </>
-  );
+  return <GameField playArr={playArr} />;
 };
 
 export default GameScreen;

@@ -141,12 +141,12 @@ h1 {
 }
 
 .fNameDriver {
-  font-size: 0.55rem;
+  font-size: 0.8rem;
 }
 
 .lNameDriver {
   color: var(--memCardHighlight);
-  font-size: 0.65rem;
+  font-size: 1rem;
   text-align: end;
   margin-right: 3px;
 }
@@ -173,8 +173,8 @@ h1 {
 }
 
 .driverNumber {
-  margin-top: 10%;
-  font-size: 0.8rem;
+  margin-top: 11%;
+  font-size: 1.2rem;
   align-self: end;
   margin-right: 3px;
 }
