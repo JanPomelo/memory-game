@@ -58,6 +58,7 @@ button {
   animation-duration: 1.2s;
   animation-iteration-count: infinite;
   overflow: hidden;
+  position: relative;
 }
 
 .tyreText {
@@ -71,8 +72,50 @@ button {
   height: 74px;
 }
 
+.tyreButton > span:first-of-type {
+  position: absolute;
+  background-image: url(./pirelli-2.svg);
+  width:35px;
+  height: 23px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: inline-block;
+  z-index: 9999;
+  top: 3px;
+  right: -3px;
+  transform: rotate(45deg);
+}
+
+.tyreButton > span:nth-of-type(2) {
+  position: absolute;
+  background-image: url(./p-zero.png);
+  display: inline-block;
+  z-index: 9999;
+  width:30px;
+  height: 23px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  left: 0;
+  bottom: 3px;
+  transform: rotate(225deg);
+}
+
 .softTyre {
   border: red 2px solid;
+}
+
+.pirelliRed {
+  filter: brightness(0) saturate(100%) invert(10%) sepia(100%) saturate(7496%) hue-rotate(3deg) brightness(106%) contrast(103%);
+}
+
+.pirelliYellow {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(41%) saturate(5778%) hue-rotate(359deg) brightness(107%) contrast(106%);
+}
+
+.pirelliWhite {
+  filter: brightness(0) saturate(100%) invert(92%) sepia(100%) saturate(0%) hue-rotate(202deg) brightness(106%) contrast(106%);
 }
 
 .mediumTyre {
@@ -133,9 +176,9 @@ button {
 }
 .rimHoles2 {
   border-radius: 50%;
-  width: 38.6px;
-  height: 38.6px;
-  border: dashed black 4.6px;
+  width: 39px;
+  height: 39px;
+  border: dashed black 4px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -161,10 +204,11 @@ button {
   border-radius: 50%;
   width: 38.6px;
   height: 38.6px;
-  border: dashed rgb(49, 49, 49) 4.6px;
+  border: dashed rgb(49, 49, 49) 4px;
   display: flex;
   justify-content: center;
   align-items: center;
+ 
   padding: 0;
   margin: 0;
 }

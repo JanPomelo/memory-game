@@ -38,7 +38,10 @@ const StartScreen: React.FC<StartScreenProps> = () => {
             >
               Welcome to F1 Memory Card Game!
             </h2>
-            <p className="text-sm px-2 my-2 leading-7">Can you pick every driver from the 2023 Formula 1 season without clicking on one driver twice? Test your memory now!</p>
+            <p className="text-sm px-2 my-2 leading-7">
+              Can you pick every driver from the 2023 Formula 1 season without clicking on one driver twice? Test your
+              memory now!
+            </p>
             <p
               className="my-2"
               style={{
@@ -50,6 +53,8 @@ const StartScreen: React.FC<StartScreenProps> = () => {
             <div className="flex justify-around gap-2">
               <button>
                 <div className="tyreButton">
+                  <span className="pirelliRed" />
+                  <span className="pirelliRed" />
                   <div className="tyreText softTyre">
                     <div className="rim">
                       <div className="rimHoles">
@@ -72,6 +77,8 @@ const StartScreen: React.FC<StartScreenProps> = () => {
               </button>
               <button>
                 <div className="tyreButton">
+                  <span className="pirelliYellow" />
+                  <span className="pirelliYellow" />
                   <div className="tyreText mediumTyre">
                     <div className="rim">
                       <div className="rimHoles">
@@ -94,6 +101,8 @@ const StartScreen: React.FC<StartScreenProps> = () => {
               </button>
               <button>
                 <div className="tyreButton">
+                  <span className="pirelliWhite" />
+                  <span className="pirelliWhite" />
                   <div className="tyreText hardTyre">
                     <div className="rim">
                       <div className="rimHoles">
