@@ -29,7 +29,7 @@ const StartScreen = () => {
     <>
       {loaded ? (
         <div className="flex flex-col justify-center items-center h-full">
-          <form className="flex flex-col bg-white p-2 rounded-2xl border-2 border-black">
+          <div className="flex flex-col bg-white p-2 rounded-2xl border-2 border-black">
             <h2 className="text-lg">Welcome to F1 Memory Card Game!</h2>
             <p>Choose the Difficulty</p>
             <div className="flex justify-around">
@@ -100,7 +100,7 @@ const StartScreen = () => {
                 Hard
               </button>
             </div>
-          </form>
+          </div>
         </div>
       ) : (
         <div className="loadingDiv">
