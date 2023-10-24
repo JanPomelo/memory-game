@@ -42,6 +42,9 @@ if it's not present, don't show loader */
   justify-content: center;
   position: relative;
   margin-bottom: 0.5rem;
+  animation-duration: 1.2s;
+  animation-iteration-count: infinite;
+
 }
 
 .tyreText {
@@ -170,4 +173,19 @@ if it's not present, don't show loader */
   height: 14px;
   border-radius: 50%;
   background-color: black;
+}
+
+button:hover .tyreButton {
+  animation-name: runTyre;
+  animation-timing-function: linear;
+}
+
+@keyframes runTyre {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(1080deg);
+  }
 }
