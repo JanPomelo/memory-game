@@ -72,6 +72,78 @@ const fakeDrivers = [
     strCutout: "https://www.thesportsdb.com/images/media/player/cutout/0c62j51679830992.png",
     id: v4(),
   },
+  {
+    strNumber: "16",
+    strPlayer: "Charles Leclerc",
+    strCutout: "https://www.thesportsdb.com/images/media/player/cutout/f8o8ki1662886556.png",
+    id: v4(),
+  },
+  {
+    strNumber: "55",
+    strPlayer: "Carlos Sainz Jr",
+    strCutout: "https://www.thesportsdb.com/images/media/player/cutout/gy6irj1679828162.png",
+    id: v4(),
+  },
+  {
+    strNumber: "81",
+    strPlayer: "Oscar Piastri",
+    strCutout: "https://www.thesportsdb.com/images/media/player/cutout/tohxj41679834601.png",
+    id: v4(),
+  },
+  {
+    strNumber: "4",
+    strPlayer: "Lando Norris",
+    strCutout: "https://www.thesportsdb.com/images/media/player/cutout/y8klca1679834536.png",
+    id: v4(),
+  },
+  {
+    strNumber: "14",
+    strPlayer: "Fernando Alonso",
+    strCutout: "https://www.thesportsdb.com/images/media/player/cutout/rmczq21677931848.png",
+    id: v4(),
+  },
+  {
+    strNumber: "18",
+    strPlayer: "Lance Stroll",
+    strCutout: "https://www.thesportsdb.com/images/media/player/cutout/25otva1679827137.png",
+    id: v4(),
+  },
+  {
+    strNumber: "10",
+    strPlayer: "Pierre Gasly",
+    strCutout: "https://www.thesportsdb.com/images/media/player/cutout/da0kzg1679828862.png",
+    id: v4(),
+  },
+  {
+    strNumber: "31",
+    strPlayer: "Esteban Ocon",
+    strCutout: "https://www.thesportsdb.com/images/media/player/cutout/4b668x1679828997.png",
+    id: v4(),
+  },
+  {
+    strNumber: "22",
+    strPlayer: "Yuki Tsunoda",
+    strCutout: "https://www.thesportsdb.com/images/media/player/cutout/87jwjm1679834116.png",
+    id: v4(),
+  },
+  {
+    strNumber: "3",
+    strPlayer: "Daniel Ricciardo",
+    strCutout: "https://www.thesportsdb.com/images/media/player/cutout/uouwkj1587471981.png",
+    id: v4(),
+  },
+  {
+    strNumber: "77",
+    strPlayer: "Valtteri Bottas",
+    strCutout: "https://www.thesportsdb.com/images/media/player/cutout/hr020f1679829429.png",
+    id: v4(),
+  },
+  {
+    strNumber: "24",
+    strPlayer: "Guanyu Zhou",
+    strCutout: "https://www.thesportsdb.com/images/media/player/cutout/jjwp9y1679829494.png",
+    id: v4(),
+  },
 ];
 
 export { drivers, fakeDrivers };
