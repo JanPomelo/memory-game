@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 
 //const allDetails = fakeDrivers;
 
-const StartScreen: React.FC<StartScreenProps> = () => {
+const StartScreen: React.FC<StartScreenProps> = ({onSoftClick, onMediumClick, onHardClick}) => {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
@@ -51,7 +51,7 @@ const StartScreen: React.FC<StartScreenProps> = () => {
               Choose the Difficulty
             </p>
             <div className="flex justify-around gap-2">
-              <button>
+              <button onClick={onSoftClick}>
                 <div className="tyreButton">
                   <span className="pirelliRed" />
                   <span className="pirelliRed" />
@@ -75,7 +75,7 @@ const StartScreen: React.FC<StartScreenProps> = () => {
                 </div>
                 Soft
               </button>
-              <button>
+              <button onClick={onMediumClick}>
                 <div className="tyreButton">
                   <span className="pirelliYellow" />
                   <span className="pirelliYellow" />
@@ -99,7 +99,7 @@ const StartScreen: React.FC<StartScreenProps> = () => {
                 </div>
                 Medium
               </button>
-              <button>
+              <button onClick={onHardClick}>
                 <div className="tyreButton">
                   <span className="pirelliWhite" />
                   <span className="pirelliWhite" />
