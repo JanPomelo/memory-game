@@ -1,12 +1,12 @@
 "use strict";
 
 import "../styles/Startpage.css";
-
+import StartScreenProps from "../interfaces/StartScreenProps";
 import { useEffect, useState } from "react";
 
 //const allDetails = fakeDrivers;
 
-const StartScreen = () => {
+const StartScreen: React.FC<StartScreenProps> = () => {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
@@ -29,7 +29,7 @@ const StartScreen = () => {
     <>
       {loaded ? (
         <div className="flex flex-col justify-center items-center h-full">
-          <div className="flex flex-col bg-white pb-2 rounded-2xl border-2 border-black">
+          <div className="flex flex-col bg-white pb-2 rounded-2xl border-2 border-black max-w-xl">
             <h2
               className="text-xl p-2 mb-2 text-white bg-asphalt rounded-t-xl shadow-lg"
               style={{

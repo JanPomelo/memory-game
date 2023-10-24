@@ -1,7 +1,8 @@
 //import { getDriverDetails } from "../apiCalls";
 //import { v4 } from "uuid";
-import { fakeDrivers } from "../drivers";
+import React from "react";
 import MemoryCard from "./MemoryCard";
+import GameFieldProps from "../interfaces/GameFieldProps";
 //import { getDriverDetails } from "../apiCalls";
 /*
 async function getAllDetails(driverArr: { firstName: string; lastName: string }[]) {
@@ -14,12 +15,11 @@ async function getAllDetails(driverArr: { firstName: string; lastName: string }[
   return allDriverDetails;
 }
 */
-const allDetails = fakeDrivers;
 
-const GameField = () => {
+const GameField: React.FC<GameFieldProps> = ({ playArr}) => {
   return (
     <div className="flex flex-wrap gap-x-2 gap-y-5 justify-around">
-      {allDetails.map((driver) => {
+      {playArr.map((driver) => {
         return (
           <MemoryCard
             driverNumber={driver.strNumber}
