@@ -1,7 +1,7 @@
 interface StartScreenProps {
-  onSoftClick: () => void;
-  onMediumClick: () => void;
-  onHardClick: () => void;
+  onSoftClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  onMediumClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  onHardClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 export default StartScreenProps;

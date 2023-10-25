@@ -41,6 +41,11 @@ button {
   transition: color 0.3s ease;
   background-color: white;
   -webkit-tap-highlight-color: transparent;
+  transition: transform 0.5s ease-in-out;
+}
+
+button > * {
+  pointer-events: none;
 }
 
 .tyreButton {
@@ -75,7 +80,7 @@ button {
 .tyreButton > span:first-of-type {
   position: absolute;
   background-image: url(./pirelli-2.svg);
-  width:35px;
+  width: 35px;
   height: 23px;
   background-position: center;
   background-size: contain;
@@ -92,7 +97,7 @@ button {
   background-image: url(./p-zero.png);
   display: inline-block;
   z-index: 9999;
-  width:30px;
+  width: 30px;
   height: 23px;
   background-position: center;
   background-size: contain;
@@ -107,15 +112,18 @@ button {
 }
 
 .pirelliRed {
-  filter: brightness(0) saturate(100%) invert(10%) sepia(100%) saturate(7496%) hue-rotate(3deg) brightness(106%) contrast(103%);
+  filter: brightness(0) saturate(100%) invert(10%) sepia(100%) saturate(7496%) hue-rotate(3deg) brightness(106%)
+    contrast(103%);
 }
 
 .pirelliYellow {
-  filter: brightness(0) saturate(100%) invert(100%) sepia(41%) saturate(5778%) hue-rotate(359deg) brightness(107%) contrast(106%);
+  filter: brightness(0) saturate(100%) invert(100%) sepia(41%) saturate(5778%) hue-rotate(359deg) brightness(107%)
+    contrast(106%);
 }
 
 .pirelliWhite {
-  filter: brightness(0) saturate(100%) invert(92%) sepia(100%) saturate(0%) hue-rotate(202deg) brightness(106%) contrast(106%);
+  filter: brightness(0) saturate(100%) invert(92%) sepia(100%) saturate(0%) hue-rotate(202deg) brightness(106%)
+    contrast(106%);
 }
 
 .mediumTyre {
@@ -208,7 +216,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
- 
+
   padding: 0;
   margin: 0;
 }
@@ -230,6 +238,21 @@ button {
   height: 14px;
   border-radius: 50%;
   background-color: black;
+}
+
+.selected {
+  transform: scale(1.5, 1.5);
+  background-color: transparent !important;
+  box-shadow: none;
+  visibility: visible;
+}
+
+.selectedSoft {
+  transform: scale(1.5, 1.5) translateX(75%);
+}
+
+.selectedHard {
+  transform: scale(1.5, 1.5) translateX(-75%);
 }
 
 button:hover .tyreButton,

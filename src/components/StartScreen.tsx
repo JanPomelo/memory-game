@@ -29,7 +29,7 @@ const StartScreen: React.FC<StartScreenProps> = ({onSoftClick, onMediumClick, on
     <>
       {loaded ? (
         <div className="flex flex-col justify-center items-center h-full">
-          <div className="flex flex-col bg-white pb-2 rounded-2xl border-2 border-black max-w-xl">
+          <div className="flex flex-col bg-white pb-2 rounded-2xl border-2 border-black max-w-xl" id="startDiv">
             <h2
               className="text-xl p-2 mb-2 text-white bg-asphalt rounded-t-xl shadow-lg"
               style={{
@@ -51,7 +51,7 @@ const StartScreen: React.FC<StartScreenProps> = ({onSoftClick, onMediumClick, on
               Choose the Difficulty
             </p>
             <div className="flex justify-around gap-2">
-              <button onClick={onSoftClick}>
+              <button onClick={onSoftClick} className="softButton">
                 <div className="tyreButton">
                   <span className="pirelliRed" />
                   <span className="pirelliRed" />
@@ -73,7 +73,7 @@ const StartScreen: React.FC<StartScreenProps> = ({onSoftClick, onMediumClick, on
                   <div className="blackRimDiv1"></div>
                   <div className="blackRimDiv2"></div>
                 </div>
-                Soft
+                <p>Soft</p>
               </button>
               <button onClick={onMediumClick}>
                 <div className="tyreButton">
@@ -97,9 +97,9 @@ const StartScreen: React.FC<StartScreenProps> = ({onSoftClick, onMediumClick, on
                   <div className="blackRimDiv1"></div>
                   <div className="blackRimDiv2"></div>
                 </div>
-                Medium
+                <p>Medium</p>
               </button>
-              <button onClick={onHardClick}>
+              <button onClick={onHardClick} className="hardButton">
                 <div className="tyreButton">
                   <span className="pirelliWhite" />
                   <span className="pirelliWhite" />
@@ -121,7 +121,7 @@ const StartScreen: React.FC<StartScreenProps> = ({onSoftClick, onMediumClick, on
                   <div className="blackRimDiv1"></div>
                   <div className="blackRimDiv2"></div>
                 </div>
-                Hard
+                <p>Hard</p>
               </button>
             </div>
           </div>
