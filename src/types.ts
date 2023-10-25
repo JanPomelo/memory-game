@@ -3,4 +3,5 @@ export type Driver = {
   strPlayer: string;
   strCutout: string;
   id: string;
-}
+  clicked: boolean;
+};
