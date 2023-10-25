@@ -3,10 +3,18 @@
 import "../styles/MemoryCard.css";
 import MemoryCardProps from "../interfaces/MemoryCard";
 //http://res.cloudinary.com/dsb37ne9e/image/fetch/w_150/"
-const MemoryCard: React.FC<MemoryCardProps> = ({ driverName, driverNumber, imageSrc }) => {
+const MemoryCard: React.FC<MemoryCardProps> = ({
+  driverName,
+  driverNumber,
+  imageSrc,
+  clicked,
+  id,
+  onClick,
+  backTurn,
+}) => {
   return (
-    <button className="outerMemCardWrapper">
-      <div className="innerMemCardWrapper">
+    <button className={"clicked" + clicked + " outerMemCardWrapper"} data-key={id} onClick={onClick}>
+      <div className={backTurn + " innerMemCardWrapper"}>
         <div className="front">
           <div className="outerMemCard">
             <div className="memCard">

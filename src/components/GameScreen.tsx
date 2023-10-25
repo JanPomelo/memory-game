@@ -7,7 +7,7 @@ import LoadingTyre from "./LoadingTyre";
 
 const GameScreen: React.FC<GameScreenProps> = ({ difficulty, tyre }) => {
   const [imgsLoaded, setImgsLoaded] = useState(false);
-
+  
   function getCardArraySize(dif: string): number {
     switch (dif) {
       case "soft":
