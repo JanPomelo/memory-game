@@ -7,10 +7,10 @@ import GameScreen from "./components/GameScreen";
 
 function App() {
   const [difficulty, setDifficulty] = useState("");
-  const [tyre, setTyre] = useState({tyreType: '', color: ''});
+  const [tyre, setTyre] = useState({ tyreType: "", color: "" });
 
   function handleClick(e: React.MouseEvent<HTMLButtonElement>, dif: string) {
-    let selectedColor = '';
+    let selectedColor = "";
     const div = document.getElementById("startDiv") as HTMLDivElement;
     div.style.visibility = "hidden";
     const button = e.target as HTMLButtonElement;
@@ -18,20 +18,23 @@ function App() {
     text.innerText = "Loading...";
     if (button.classList.contains("softButton")) {
       button.classList.add("selectedSoft");
-      selectedColor = 'Red'
+      selectedColor = "Red";
     } else if (button.classList.contains("hardButton")) {
       button.classList.add("selectedHard");
-      selectedColor = 'White'
+      selectedColor = "White";
     } else {
-      selectedColor = 'Yellow'
+      selectedColor = "Yellow";
     }
     button.classList.add("selected");
     setTimeout(() => {
       setDifficulty(dif);
-      setTyre({tyreType: dif.toLocaleUpperCase(), color: selectedColor})
+      setTyre({ tyreType: dif.toLocaleUpperCase(), color: selectedColor });
     }, 1000);
+  }
 
-  } 
+  function onStartPageClick() {
+    setDifficulty("");
+  }
 
   return (
     <>
@@ -48,7 +51,13 @@ function App() {
           }}
         />
       ) : (
-        <GameScreen difficulty={difficulty} tyre={tyre} />
+        <GameScreen
+          difficulty={difficulty}
+          tyre={tyre}
+          onStartPageClick={() => {
+            onStartPageClick();
+          }}
+        />
       )}
     </>
   );

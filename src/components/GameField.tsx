@@ -17,7 +17,7 @@ async function getAllDetails(driverArr: { firstName: string; lastName: string }[
 }
 */
 
-const GameField: React.FC<GameFieldProps> = ({ playArr }) => {
+const GameField: React.FC<GameFieldProps> = ({ playArr, onStartPageClick }) => {
   const [gameArray, setGameArray] = useState(playArr);
   const [backTurn, setBackTurn] = useState("");
   const newGameArr = [...gameArray];
@@ -49,23 +49,40 @@ const GameField: React.FC<GameFieldProps> = ({ playArr }) => {
   };
 
   return (
-    <div className="flex flex-wrap gap-x-2 gap-y-5 justify-around">
-      {newGameArr.map((driver) => {
-        return (
-          <MemoryCard
-            driverNumber={driver.strNumber}
-            driverName={driver.strPlayer}
-            imageSrc={driver.strCutout}
-            id={driver.id}
-            key={driver.id}
-            clicked={driver.clicked}
-            onClick={(e) => {
-              handleCardClick(e);
-            }}
-            backTurn={backTurn}
-          ></MemoryCard>
-        );
-      })}
+    <div className="flex flex-col h-full gap-4">
+      <div className="menu flex flex-col gap-4 md:flex-row justify-between px-4">
+          <button className="bg-black text-white px-2 rounded-xl" onClick={onStartPageClick}>Startpage</button>
+        <div className="scores flex flex-col text-white bg-black px-2 py-1 rounded-xl">
+          <div className="flex">
+            <p>Current Score - </p>
+            <p></p>
+          </div>
+          <div className="flex justify-end">
+            <p>Best Score - </p>
+            <p></p>
+          </div>
+        </div>
+      </div>
+      <div className="flex-grow flex items-center justify-center">
+        <div className="flex flex-wrap gap-x-2 gap-y-5 justify-around">
+          {newGameArr.map((driver) => {
+            return (
+              <MemoryCard
+                driverNumber={driver.strNumber}
+                driverName={driver.strPlayer}
+                imageSrc={driver.strCutout}
+                id={driver.id}
+                key={driver.id}
+                clicked={driver.clicked}
+                onClick={(e) => {
+                  handleCardClick(e);
+                }}
+                backTurn={backTurn}
+              ></MemoryCard>
+            );
+          })}
+        </div>
+      </div>
     </div>
   );
 };
