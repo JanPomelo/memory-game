@@ -1,8 +1,9 @@
 "use strict";
 
+import "../styles/MemoryCard.css";
 import MemoryCardProps from "../interfaces/MemoryCard";
 //http://res.cloudinary.com/dsb37ne9e/image/fetch/w_150/"
-const MemoryCard: React.FC<MemoryCardProps> = ({driverName, driverNumber, imageSrc, key}) => {
+const MemoryCard: React.FC<MemoryCardProps> = ({ driverName, driverNumber, imageSrc, key }) => {
   return (
     <div className="outerMemCard" key={key}>
       <div className="memCard">
