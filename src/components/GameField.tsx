@@ -49,10 +49,15 @@ const GameField: React.FC<GameFieldProps> = ({ playArr, onStartPageClick }) => {
   };
 
   return (
-    <div className="flex flex-col h-full gap-4">
-      <div className="menu flex flex-col gap-4 md:flex-row justify-between px-4">
-          <button className="bg-black text-white px-2 rounded-xl" onClick={onStartPageClick}>Startpage</button>
-        <div className="scores flex flex-col text-white bg-black px-2 py-1 rounded-xl">
+    <div className="flex flex-col h-full gap-4 w-full">
+      <div className="menu flex flex-col gap-4 sm:flex-row justify-between px-4 w-full py-2">
+        <button
+          className="bg-white px-2 py-1 rounded-xl backToStartPageButton mx-auto sm:my-auto sm:mx-0"
+          onClick={onStartPageClick}
+        >
+          Startpage
+        </button>
+        <div className="scores flex flex-col bg-white px-2 py-1 rounded-xl mx-auto sm:my-auto sm:mx-0">
           <div className="flex">
             <p>Current Score - </p>
             <p></p>

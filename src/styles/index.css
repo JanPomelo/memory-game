@@ -65,7 +65,29 @@ h1 {
   line-height: 1.1;
 }
 
+.menu {
+  background: repeating-linear-gradient(45deg, black 0, black 10%, black 0, transparent 50%),
+    repeating-linear-gradient(135deg, black 0%, black 10%, black 0, transparent 50%);
+  background-size: 1em 1em;
+  background-color: #0b6f81;
+  opacity: 1;
+}
 
+.backToStartPageButton,
+.scores {
+  box-shadow: 2px 3px 5px rgba(180, 180, 180, 0.9);
+}
+
+.backToStartPageButton {
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.backToStartPageButton:hover,
+.backToStartPageButton:focus {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 5px 3px #03cef1, 0px 0px 5px 1px rgba(255, 215, 0, 0.5);
+  outline: none;
+}
 
 @media (prefers-color-scheme: light) {
   :root {
