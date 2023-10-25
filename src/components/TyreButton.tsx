@@ -2,7 +2,7 @@ import TyreButtonProps from "../interfaces/TyreButtonProps";
 
 const TyreButton: React.FC<TyreButtonProps> = ({ onClick, tyreType, color }) => {
   return (
-    <button onClick={onClick} className={ tyreType.toLowerCase() + "Button"}>
+    <button onClick={onClick} className={ tyreType.toLowerCase() + "Button startPageButton"}>
       <div className="tyreButton">
         <span className={"pirelli" + color} />
         <span className={"pirelli" + color} />

@@ -3,7 +3,7 @@ import LoadingTyreProps from "../interfaces/LoadingTyreProps";
 const LoadingTyre: React.FC<LoadingTyreProps> = ({ color, tyreType }) => {
   return (
     <div className="flex justify-center items-center h-full">
-      <button className={tyreType.toLowerCase() + "Button selectedLoading"}>
+      <button className={tyreType.toLowerCase() + "Button selectedLoading startPageButton"}>
         <div className="tyreButton">
           <span className={"pirelli" + color} />
           <span className={"pirelli" + color} />
