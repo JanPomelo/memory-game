@@ -3,10 +3,11 @@
 import "../styles/Startpage.css";
 import StartScreenProps from "../interfaces/StartScreenProps";
 import { useEffect, useState } from "react";
+import TyreButton from "./TyreButton";
 
 //const allDetails = fakeDrivers;
 
-const StartScreen: React.FC<StartScreenProps> = ({onSoftClick, onMediumClick, onHardClick}) => {
+const StartScreen: React.FC<StartScreenProps> = ({ onSoftClick, onMediumClick, onHardClick }) => {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
@@ -51,78 +52,9 @@ const StartScreen: React.FC<StartScreenProps> = ({onSoftClick, onMediumClick, on
               Choose the Difficulty
             </p>
             <div className="flex justify-around gap-2">
-              <button onClick={onSoftClick} className="softButton">
-                <div className="tyreButton">
-                  <span className="pirelliRed" />
-                  <span className="pirelliRed" />
-                  <div className="tyreText softTyre">
-                    <div className="rim">
-                      <div className="rimHoles">
-                        <div className="rimHoles2">
-                          <div className="yellowRing">
-                            <div className="whiteRing"></div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="rimHolesAbs">
-                        <div className="rimHoles2Abs"></div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="blackRimDiv1"></div>
-                  <div className="blackRimDiv2"></div>
-                </div>
-                <p>Soft</p>
-              </button>
-              <button onClick={onMediumClick}>
-                <div className="tyreButton">
-                  <span className="pirelliYellow" />
-                  <span className="pirelliYellow" />
-                  <div className="tyreText mediumTyre">
-                    <div className="rim">
-                      <div className="rimHoles">
-                        <div className="rimHoles2">
-                          <div className="yellowRing">
-                            <div className="whiteRing"></div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="rimHolesAbs">
-                        <div className="rimHoles2Abs"></div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="blackRimDiv1"></div>
-                  <div className="blackRimDiv2"></div>
-                </div>
-                <p>Medium</p>
-              </button>
-              <button onClick={onHardClick} className="hardButton">
-                <div className="tyreButton">
-                  <span className="pirelliWhite" />
-                  <span className="pirelliWhite" />
-                  <div className="tyreText hardTyre">
-                    <div className="rim">
-                      <div className="rimHoles">
-                        <div className="rimHoles2">
-                          <div className="yellowRing">
-                            <div className="whiteRing"></div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="rimHolesAbs">
-                        <div className="rimHoles2Abs"></div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="blackRimDiv1"></div>
-                  <div className="blackRimDiv2"></div>
-                </div>
-                <p>Hard</p>
-              </button>
+              <TyreButton onClick={onSoftClick} tyreType="Soft" color="Red" />
+              <TyreButton onClick={onMediumClick} tyreType="Medium" color="Yellow"/>
+              <TyreButton onClick={onHardClick} tyreType="Hard" color="White" />
             </div>
           </div>
         </div>

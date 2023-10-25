@@ -241,18 +241,31 @@ button > * {
 }
 
 .selected {
-  transform: scale(1.5, 1.5);
+  transform: scale(1.5, 1.5) translateY(-45.5%);
   background-color: transparent !important;
   box-shadow: none;
   visibility: visible;
 }
 
+.selectedLoading {
+  transform: scale(1.5, 1.5) ;
+  background-color: transparent !important;
+  box-shadow: none;
+  visibility: visible;
+}
+
+.selected > .tyreButton, .selectedLoading > .tyreButton {
+  animation-name: runTyre;
+  animation-duration: 1.2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
 .selectedSoft {
-  transform: scale(1.5, 1.5) translateX(75%);
+  transform: scale(1.5, 1.5) translateX(73%) translateY(-45.5%);;
 }
 
 .selectedHard {
-  transform: scale(1.5, 1.5) translateX(-75%);
+  transform: scale(1.5, 1.5) translateX(-73.5%) translateY(-45.5%);;
 }
 
 button:hover .tyreButton,
