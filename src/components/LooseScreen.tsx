@@ -11,7 +11,7 @@ const LooseScreen: React.FC<LooseScreenProps> = ({ end, onRetryClick, onStartPag
           </div>
           <div className="flex w-full justify-between bgLose">
             <button className="loseButtons" onClick={onRetryClick}>Retry</button>
-            <button className="loseButtons" onClick={onStartPageClick}>Startpage</button>
+            <button className="loseButtons" onClick={onStartPageClick}>Startscreen</button>
           </div>
         </div>
       ) : (

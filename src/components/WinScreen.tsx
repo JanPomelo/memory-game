@@ -14,7 +14,7 @@ const WinScreen: React.FC<LooseScreenProps> = ({ onRetryClick, onStartPageClick 
           Play Again
         </button>
         <button className="loseButtons" onClick={onStartPageClick}>
-          Startpage
+          Startscreen
         </button>
       </div>
     </div>
