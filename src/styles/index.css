@@ -110,6 +110,10 @@ h1 {
   transition: transform 0.2s linear;
 }
 
+.gameField {
+  transition: transform 0.2s linear;
+}
+
 .transformed {
   transform: scale(0);
 }

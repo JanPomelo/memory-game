@@ -76,7 +76,7 @@ const GameField: React.FC<GameFieldProps> = ({ playArr, onStartPageClick }) => {
           </div>
         </div>
       </div>
-      <div className="flex-grow flex items-center justify-center">
+      <div className="flex-grow flex items-center justify-center gameField">
         <div className="flex flex-wrap gap-x-2 gap-y-5 justify-around">
           {newGameArr.map((driver) => {
             return (

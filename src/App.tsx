@@ -33,7 +33,15 @@ function App() {
   }
 
   function onStartPageClick() {
-    setDifficulty("");
+    const gameField = document.getElementsByClassName("gameField")[0] as HTMLDivElement;
+    gameField.classList.add("transformed");
+    const loseScreen = document.getElementsByClassName("loseScreen")[0];
+    if (loseScreen) {
+      loseScreen.classList.add("transformed");
+    }
+    setTimeout(() => {
+      setDifficulty("");
+    }, 200);
   }
 
   return (
