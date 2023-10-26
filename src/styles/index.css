@@ -74,16 +74,16 @@ h1 {
 }
 
 .backToStartPageButton,
-.scores {
+.scores, .loseButtons {
   box-shadow: 2px 3px 5px rgba(180, 180, 180, 0.9);
 }
 
-.backToStartPageButton {
+.backToStartPageButton, .loseButtons {
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .backToStartPageButton:hover,
-.backToStartPageButton:focus {
+.backToStartPageButton:focus, .loseButtons:hover, .loseButtons:focus {
   transform: scale(1.1);
   box-shadow: 0px 0px 5px 3px #03cef1, 0px 0px 5px 1px rgba(255, 215, 0, 0.5);
   outline: none;
@@ -91,25 +91,48 @@ h1 {
 
 .loseScreen {
   position: absolute;
-  right: calc(50vw - 100px);
-  top: calc(50vh - 100px);
+  right: calc(50vw - 153px);
+  top: calc(50vh - 153px);
   background-color: white;
   z-index: 9999;
-  height: 200px;
-  width: 300px;
+  height: 306px;
+  width: 306px;
   border: 3px solid black;
   border-radius: 2rem;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-direction: column;
+  background-image: url(./f1-lose.png);
+  background-position: center +40px;
+  background-size: contain;
+  box-shadow: 0px 0px 10px 7px rgba(76, 76, 76, 0.9);
+  transition: transform 0.2s linear;
+}
+
+.transformed {
+  transform: scale(0);
+}
+
+
+
+.loseText {
+  background-color: black;
+  color: white;
   padding: 0.5rem;
+  border-top-right-radius: 1.5rem;
+  border-top-left-radius: 1.5rem;
+}
+
+.loseText > h4 {
+  font-size: 1.5rem;
 }
 
 .loseButtons {
-  border: 2px solid black;
-  padding: 0.5rem;
-  
+  margin: 1rem;
+  background-color: white;
+  padding: 0.8rem;
+  border-radius: 1rem;
 }
 
 @media (prefers-color-scheme: light) {

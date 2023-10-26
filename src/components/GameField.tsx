@@ -49,11 +49,15 @@ const GameField: React.FC<GameFieldProps> = ({ playArr, onStartPageClick }) => {
     for (let i = 0; i < newGameArr.length; i++) {
       newGameArr[i].clicked = false;
     }
-    shuffleArray(newGameArr);
-    setGameArray(newGameArr);
-    setBackTurn("");
-    setScore(0);
-    setEnd("");
+    const loseScreen = document.getElementsByClassName("loseScreen")[0] as HTMLDivElement;
+    loseScreen.classList.add("transformed");
+    setTimeout(() => {
+      shuffleArray(newGameArr);
+      setGameArray(newGameArr);
+      setBackTurn("");
+      setScore(0);
+      setEnd("");
+    }, 200);
   }
 
   return (
