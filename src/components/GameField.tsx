@@ -2,11 +2,14 @@ import React, { useState } from "react";
 import MemoryCard from "./MemoryCard";
 import GameFieldProps from "../interfaces/GameFieldProps";
 import { Driver } from "../types";
+import LooseScreen from "./LooseScreen";
 
 const GameField: React.FC<GameFieldProps> = ({ playArr, onStartPageClick }) => {
   const [gameArray, setGameArray] = useState(playArr);
   const [backTurn, setBackTurn] = useState("");
   const [score, setScore] = useState(0);
+  const [end, setEnd] = useState("");
+
   const newGameArr = [...gameArray];
 
   function shuffleArray(array: Driver[]) {
@@ -21,20 +24,37 @@ const GameField: React.FC<GameFieldProps> = ({ playArr, onStartPageClick }) => {
   const handleCardClick: React.MouseEventHandler<HTMLButtonElement> = (e: React.MouseEvent<HTMLButtonElement>) => {
     const button: HTMLButtonElement = e.target as HTMLButtonElement;
     const id: string = button.getAttribute("data-key") as string;
-      for (let i = 0; i < newGameArr.length; i++) {
-        if (id === newGameArr[i].id) {
-          newGameArr[i].clicked = true;
-        }
+    button.blur();
+    let alreadyClicked = false;
+    for (let i = 0; i < newGameArr.length; i++) {
+      if (id === newGameArr[i].id) {
+        alreadyClicked = newGameArr[i].clicked;
+        newGameArr[i].clicked = true;
       }
-      button.blur();
-      setBackTurn("backTurn");
+    }
+    setBackTurn("backTurn");
+    if (!alreadyClicked) {
       setTimeout(() => {
         shuffleArray(newGameArr);
         setGameArray(newGameArr);
         setBackTurn("");
         setScore(score + 1);
       }, 1000);
+    } else {
+      setEnd("lose");
+    }
   };
+
+  function onRetryClick() {
+    for (let i = 0; i < newGameArr.length; i++) {
+      newGameArr[i].clicked = false;
+    }
+    shuffleArray(newGameArr);
+    setGameArray(newGameArr);
+    setBackTurn("");
+    setScore(0);
+    setEnd("");
+  }
 
   return (
     <div className="flex flex-col h-full gap-4 w-full">
@@ -48,7 +68,7 @@ const GameField: React.FC<GameFieldProps> = ({ playArr, onStartPageClick }) => {
         <div className="scores flex flex-col bg-white px-2 py-1 rounded-xl mx-auto sm:my-auto sm:mx-0">
           <div className="flex gap-2">
             <p>Score - </p>
-            <p>{score + '/' + newGameArr.length}</p>
+            <p>{score + "/" + newGameArr.length}</p>
           </div>
         </div>
       </div>
@@ -72,6 +92,17 @@ const GameField: React.FC<GameFieldProps> = ({ playArr, onStartPageClick }) => {
           })}
         </div>
       </div>
+      {end === "lose" ? (
+        <LooseScreen
+          end={end}
+          onRetryClick={() => {
+            onRetryClick();
+          }}
+          onStartPageClick={onStartPageClick}
+        />
+      ) : (
+        <></>
+      )}
     </div>
   );
 };
