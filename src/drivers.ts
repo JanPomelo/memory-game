@@ -168,3 +168,150 @@ const fakeDrivers: Driver[] = [
 ];
 
 export { drivers, fakeDrivers };
+
+/*
+const fakeDrivers: Driver[] = [
+  {
+    strNumber: "23",
+    strPlayer: "Alexander Albon",
+    strCutout: "./hamilton.png",
+    id: v4(),
+    clicked: false,
+  },
+  {
+    strNumber: "1",
+    strPlayer: "Max Verstappen",
+    strCutout: "./hamilton.png",
+    id: v4(),
+    clicked: false,
+  },
+  {
+    strNumber: "11",
+    strPlayer: "Sergio Perez",
+    strCutout: "./hamilton.png",
+    id: v4(),
+    clicked: false,
+  },
+  {
+    strNumber: "44",
+    strPlayer: "Lewis Hamilton",
+    strCutout: "./hamilton.png",
+    id: v4(),
+    clicked: false,
+  },
+  {
+    strNumber: "63",
+    strPlayer: "George Russell",
+    strCutout: "./hamilton.png",
+    id: v4(),
+    clicked: false,
+  },
+  {
+    strNumber: "27",
+    strPlayer: "Nico Hulkenberg",
+    strCutout: "./hamilton.png",
+    id: v4(),
+    clicked: false,
+  },
+  {
+    strNumber: "20",
+    strPlayer: "Kevin Magnussen",
+    strCutout: "./hamilton.png",
+    id: v4(),
+    clicked: false,
+  },
+  {
+    strNumber: "2",
+    strPlayer: "Logan Sargeant",
+    strCutout: "./hamilton.png",
+    id: v4(),
+    clicked: false,
+  },
+  {
+    strNumber: "16",
+    strPlayer: "Charles Leclerc",
+    strCutout: "./hamilton.png",
+    id: v4(),
+    clicked: false,
+  },
+  {
+    strNumber: "55",
+    strPlayer: "Carlos Sainz Jr",
+    strCutout: "./hamilton.png",
+    id: v4(),
+    clicked: false,
+  },
+  {
+    strNumber: "81",
+    strPlayer: "Oscar Piastri",
+    strCutout: "./hamilton.png",
+    id: v4(),
+    clicked: false,
+  },
+  {
+    strNumber: "4",
+    strPlayer: "Lando Norris",
+    strCutout: "./hamilton.png",
+    id: v4(),
+    clicked: false,
+  },
+  {
+    strNumber: "14",
+    strPlayer: "Fernando Alonso",
+    strCutout: "./hamilton.png",
+    id: v4(),
+    clicked: false,
+  },
+  {
+    strNumber: "18",
+    strPlayer: "Lance Stroll",
+    strCutout: "./hamilton.png",
+    id: v4(),
+    clicked: false,
+  },
+  {
+    strNumber: "10",
+    strPlayer: "Pierre Gasly",
+    strCutout: "./hamilton.png",
+    id: v4(),
+    clicked: false,
+  },
+  {
+    strNumber: "31",
+    strPlayer: "Esteban Ocon",
+    strCutout: "./hamilton.png",
+    id: v4(),
+    clicked: false,
+  },
+  {
+    strNumber: "22",
+    strPlayer: "Yuki Tsunoda",
+    strCutout: "./hamilton.png",
+    id: v4(),
+    clicked: false,
+  },
+  {
+    strNumber: "3",
+    strPlayer: "Daniel Ricciardo",
+    strCutout: "./hamilton.png",
+    id: v4(),
+    clicked: false,
+  },
+  {
+    strNumber: "77",
+    strPlayer: "Valtteri Bottas",
+    strCutout: "./hamilton.png",
+    id: v4(),
+    clicked: false,
+  },
+  {
+    strNumber: "24",
+    strPlayer: "Guanyu Zhou",
+    strCutout: "./hamilton.png",
+    id: v4(),
+    clicked: false,
+  },
+];
+
+export { drivers, fakeDrivers };
+*/

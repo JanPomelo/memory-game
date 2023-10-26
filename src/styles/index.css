@@ -134,7 +134,7 @@ h1 {
 .transformed {
   animation-name: fadeOut;
   animation-duration: 0.2s;
-  animation-timing-function: cubic-bezier(1,.04,.87,.59);
+  animation-timing-function: cubic-bezier(1, 0.04, 0.87, 0.59);
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
 }
@@ -173,10 +173,13 @@ h1 {
   background-image: url(./musicOn.svg);
   background-position: center;
   background-size: contain;
+  background-size: 20px;
+  background-repeat: no-repeat;
 }
 .falsemusic {
   background-image: url(./musicOff.svg);
   background-position: center;
+  background-size: contain;
   background-size: 20px;
   background-repeat: no-repeat;
 }
