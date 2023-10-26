@@ -4,10 +4,32 @@ import "./styles/App.css";
 import StartScreen from "./components/StartScreen";
 import { useState } from "react";
 import GameScreen from "./components/GameScreen";
+import sound from "./assets/backGround.mp3";
+
+const bgMusic = new Audio(sound);
+function play() {
+  bgMusic.loop = true;
+  bgMusic.volume = 0.03;
+  bgMusic.play();
+}
+
+function stop() {
+  bgMusic.pause();
+}
 
 function App() {
   const [difficulty, setDifficulty] = useState("");
   const [tyre, setTyre] = useState({ tyreType: "", color: "" });
+  const [music, setMusic] = useState(false);
+  function controlMusic() {
+    if (music) {
+      stop();
+      setMusic(false);
+    } else {
+      play();
+      setMusic(true);
+    }
+  }
 
   function handleClick(e: React.MouseEvent<HTMLButtonElement>, dif: string) {
     let selectedColor = "";
@@ -43,9 +65,8 @@ function App() {
       setDifficulty("");
     }, 200);
   }
-
   return (
-    <>
+    <div className="h-full w-full">
       {difficulty === "" ? (
         <StartScreen
           onSoftClick={(e) => {
@@ -67,7 +88,8 @@ function App() {
           }}
         />
       )}
-    </>
+      <button className={music + "music musicButton"} onClick={controlMusic}></button>
+    </div>
   );
 }
 export default App;
