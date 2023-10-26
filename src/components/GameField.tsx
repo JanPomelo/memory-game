@@ -3,6 +3,7 @@ import MemoryCard from "./MemoryCard";
 import GameFieldProps from "../interfaces/GameFieldProps";
 import { Driver } from "../types";
 import LooseScreen from "./LooseScreen";
+import WinScreen from "./WinScreen";
 
 const GameField: React.FC<GameFieldProps> = ({ playArr, onStartPageClick }) => {
   const [gameArray, setGameArray] = useState(playArr);
@@ -34,12 +35,17 @@ const GameField: React.FC<GameFieldProps> = ({ playArr, onStartPageClick }) => {
     }
     setBackTurn("backTurn");
     if (!alreadyClicked) {
-      setTimeout(() => {
-        shuffleArray(newGameArr);
-        setGameArray(newGameArr);
-        setBackTurn("");
+      if (score + 1 >= newGameArr.length) {
         setScore(score + 1);
-      }, 1000);
+        setEnd("win");
+      } else {
+        setTimeout(() => {
+          shuffleArray(newGameArr);
+          setGameArray(newGameArr);
+          setBackTurn("");
+          setScore(score + 1);
+        }, 1000);
+      }
     } else {
       setEnd("lose");
     }
@@ -49,7 +55,7 @@ const GameField: React.FC<GameFieldProps> = ({ playArr, onStartPageClick }) => {
     for (let i = 0; i < newGameArr.length; i++) {
       newGameArr[i].clicked = false;
     }
-    const loseScreen = document.getElementsByClassName("loseScreen")[0] as HTMLDivElement;
+    const loseScreen = document.getElementsByClassName("endScreen")[0] as HTMLDivElement;
     loseScreen.classList.add("transformed");
     setTimeout(() => {
       shuffleArray(newGameArr);
@@ -104,6 +110,14 @@ const GameField: React.FC<GameFieldProps> = ({ playArr, onStartPageClick }) => {
           }}
           onStartPageClick={onStartPageClick}
         />
+      ) : end === "win" ? (
+        <WinScreen
+          end={end}
+          onRetryClick={() => {
+            onRetryClick();
+          }}
+          onStartPageClick={onStartPageClick}
+        ></WinScreen>
       ) : (
         <></>
       )}

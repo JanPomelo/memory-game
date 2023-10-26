@@ -35,7 +35,7 @@ function App() {
   function onStartPageClick() {
     const gameField = document.getElementsByClassName("gameField")[0] as HTMLDivElement;
     gameField.classList.add("transformed");
-    const loseScreen = document.getElementsByClassName("loseScreen")[0];
+    const loseScreen = document.getElementsByClassName("endScreen")[0];
     if (loseScreen) {
       loseScreen.classList.add("transformed");
     }

@@ -89,7 +89,7 @@ h1 {
   outline: none;
 }
 
-.loseScreen {
+.endScreen {
   position: absolute;
   right: calc(50vw - 153px);
   top: calc(50vh - 153px);
@@ -103,11 +103,19 @@ h1 {
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
+    box-shadow: 0px 0px 10px 7px rgba(76, 76, 76, 0.9);
+  transition: transform 0.2s linear;
+    background-size: contain;
+}
+
+.loseScreen {
   background-image: url(./f1-lose.png);
   background-position: center +40px;
-  background-size: contain;
-  box-shadow: 0px 0px 10px 7px rgba(76, 76, 76, 0.9);
-  transition: transform 0.2s linear;
+}
+
+.winScreen {
+  background-image: url(./f1-win.png);
+  background-position: center; 
 }
 
 .gameField {

@@ -4,7 +4,7 @@ const LooseScreen: React.FC<LooseScreenProps> = ({ end, onRetryClick, onStartPag
   return (
     <>
       {end === "lose" ? (
-        <div className="loseScreen">
+        <div className="loseScreen endScreen">
           <div className="flex flex-col gap-2 loseText">
             <h4>You lost!</h4>
             <p>Try again or go back to the Start Screen</p>
