@@ -158,6 +158,29 @@ h1 {
   border-radius: 1rem;
 }
 
+.musicButton {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  width: 32px;
+  height: 32px;
+  border: #213547 solid 1px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.truemusic {
+  background-image: url(./musicOn.svg);
+  background-position: center;
+  background-size: contain;
+}
+.falsemusic {
+  background-image: url(./musicOff.svg);
+  background-position: center;
+  background-size: 20px;
+  background-repeat: no-repeat;
+}
+
 @keyframes fadeIn {
   0% {
     transform: scale(0);
