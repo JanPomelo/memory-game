@@ -74,16 +74,20 @@ h1 {
 }
 
 .backToStartPageButton,
-.scores, .loseButtons {
+.scores,
+.loseButtons {
   box-shadow: 2px 3px 5px rgba(180, 180, 180, 0.9);
 }
 
-.backToStartPageButton, .loseButtons {
+.backToStartPageButton,
+.loseButtons {
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .backToStartPageButton:hover,
-.backToStartPageButton:focus, .loseButtons:hover, .loseButtons:focus {
+.backToStartPageButton:focus,
+.loseButtons:hover,
+.loseButtons:focus {
   transform: scale(1.1);
   box-shadow: 0px 0px 5px 3px #03cef1, 0px 0px 5px 1px rgba(255, 215, 0, 0.5);
   outline: none;
@@ -103,19 +107,24 @@ h1 {
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
-    box-shadow: 0px 0px 10px 7px rgba(76, 76, 76, 0.9);
+  box-shadow: 0px 0px 10px 7px rgba(76, 76, 76, 0.9);
   transition: transform 0.2s linear;
-    background-size: contain;
+  background-size: contain;
+  animation-name: fadeIn;
+  animation-duration: 0.4s;
+  animation-timing-function: cubic-bezier(0.17, 0.65, 0.32, 1.49);
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
 }
 
 .loseScreen {
   background-image: url(./f1-lose.png);
-  background-position: center +40px;
+  background-position: center + 40px;
 }
 
 .winScreen {
   background-image: url(./f1-win.png);
-  background-position: center; 
+  background-position: center;
 }
 
 .gameField {
@@ -123,10 +132,12 @@ h1 {
 }
 
 .transformed {
-  transform: scale(0);
+  animation-name: fadeOut;
+  animation-duration: 0.2s;
+  animation-timing-function: cubic-bezier(1,.04,.87,.59);
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
 }
-
-
 
 .loseText {
   background-color: black;
@@ -145,6 +156,24 @@ h1 {
   background-color: white;
   padding: 0.8rem;
   border-radius: 1rem;
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
 }
 
 @media (prefers-color-scheme: light) {
