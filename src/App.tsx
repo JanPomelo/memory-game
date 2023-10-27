@@ -104,12 +104,23 @@ function App() {
           }}
         />
       )}
-      <button className={music + "music musicButton roundBut"} onClick={controlMusic}></button>
-      <span className="butDescmusic">Music</span>
-      <button className={sound + "Sound soundButton roundBut"} onClick={controlSound}></button>
-      <span className="butDescsound">SFX</span>
-      <a href="https://www.github.com/janpomelo/memory-game" target="_blank" className="githubBut roundBut"></a>
-      <span className="butDescGH">GitHub & Credits</span>
+      <label htmlFor="musicBut" className="butDescmusic">
+        Music
+      </label>
+      <button id="musicBut" className={music + "music musicButton roundBut"} onClick={controlMusic}></button>
+      <label htmlFor="soundBut" className="butDescsound">
+        SFX
+      </label>
+      <button id="soundBut" className={sound + "Sound soundButton roundBut"} onClick={controlSound}></button>
+      <label htmlFor="githubBut" className="butDescGH">
+        GitHub & Credits
+      </label>
+      <a
+        href="https://www.github.com/janpomelo/memory-game"
+        target="_blank"
+        id="githubBut"
+        className="githubBut roundBut"
+      ></a>
     </div>
   );
 }
