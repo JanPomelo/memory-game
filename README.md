@@ -1,7 +1,38 @@
-www.thesportsdb.com API Usage
+# F1 Memory Card Game
 
-Music by <a href="https://pixabay.com/users/comastudio-26079283/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=116346">ComaStudio</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=116346">Pixabay</a>
+In this project, I learned more about React Hooks, especially about useEffect()
+Furthermore, I started using Interfaces for Props for better structure of the project.
 
-F1 Sound Effect by <a href="https://pixabay.com/users/soundreality-31074404/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=151254">Jurij</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=151254">Pixabay</a>
+## API
 
-Flipping Cards Sound Effect from <a href="https://pixabay.com/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=91468">Pixabay</a>
+The data and images are fetched from the following API:
+
+- www.thesportsdb.com API Usage
+
+## SVG
+
+All SVGs for the buttons (music, SFX) are from the following source:
+
+- https://www.svgrepo.com
+
+## Images
+
+The images are drawn with DreamStudio AI
+
+- https://www.beta.dreamstudio.ai
+
+## Music and Soundeffects
+
+The music and soundeffects are from the following sources (pixabay):
+
+### Background Music
+
+- https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=116346
+
+### Start-Game Soundeffect
+
+- https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=151254
+
+### Shuffle Cards Soundeffect
+
+- https://pixabay.com/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=91468
