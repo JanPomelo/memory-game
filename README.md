@@ -1,6 +1,7 @@
 # F1 Memory Card Game
 
-In this project, I learned more about React Hooks, especially about useEffect()
+In this project, I learned more about React Hooks, especially about useEffect().
+
 Furthermore, I started using Interfaces for Props for better structure of the project.
 
 ## API
