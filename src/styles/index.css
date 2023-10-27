@@ -117,12 +117,12 @@ h1 {
 }
 
 .loseScreen {
-  background-image: url(/f1-lose.png);
+  background-image: url(/f1-lose.webp);
   background-position: center + 40px;
 }
 
 .winScreen {
-  background-image: url(/f1-win.png);
+  background-image: url(/f1-win.webp);
   background-position: center;
 }
 
