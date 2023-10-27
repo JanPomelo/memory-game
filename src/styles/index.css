@@ -16,7 +16,6 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -28,7 +27,7 @@
 }
 
 #bgImage {
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   background-image: url(./bg.png);
@@ -129,6 +128,7 @@ h1 {
 
 .gameField {
   transition: transform 0.2s linear;
+  padding: 7px;
 }
 
 .transformed {
