@@ -26,7 +26,7 @@ if it's not present, don't show loader */
 .se-pre-con {
   width: 320px;
   aspect-ratio: 1.33;
-  background: url(./giphy.gif) center no-repeat;
+  background: url(/giphy.gif) center no-repeat;
   background-size: contain;
 }
 
@@ -79,7 +79,7 @@ button > * {
 
 .tyreButton > span:first-of-type {
   position: absolute;
-  background-image: url(./pirelli-2.svg);
+  background-image: url(/pirelli-2.svg);
   width: 35px;
   height: 23px;
   background-position: center;
@@ -94,7 +94,7 @@ button > * {
 
 .tyreButton > span:nth-of-type(2) {
   position: absolute;
-  background-image: url(./p-zero.png);
+  background-image: url(/p-zero.png);
   display: inline-block;
   z-index: 9999;
   width: 30px;
@@ -248,24 +248,25 @@ button > * {
 }
 
 .selectedLoading {
-  transform: scale(1.5, 1.5) ;
+  transform: scale(1.5, 1.5);
   background-color: transparent !important;
   box-shadow: none;
   visibility: visible;
 }
 
-.selected > .tyreButton, .selectedLoading > .tyreButton {
+.selected > .tyreButton,
+.selectedLoading > .tyreButton {
   animation-name: runTyre;
   animation-duration: 1.2s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
 .selectedSoft {
-  transform: scale(1.5, 1.5) translateX(73%) translateY(-45.5%);;
+  transform: scale(1.5, 1.5) translateX(73%) translateY(-45.5%);
 }
 
 .selectedHard {
-  transform: scale(1.5, 1.5) translateX(-73.5%) translateY(-45.5%);;
+  transform: scale(1.5, 1.5) translateX(-73.5%) translateY(-45.5%);
 }
 
 .startPageButton:hover .tyreButton,

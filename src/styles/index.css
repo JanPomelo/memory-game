@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: "F1Font";
-  src: url(./Formula1-Wide.otf);
+  src: url(/Formula1-Wide.otf);
 }
 
 :root {
@@ -30,7 +30,7 @@
   position: fixed;
   left: 0;
   top: 0;
-  background-image: url(./bg.png);
+  background-image: url(/bg.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -117,12 +117,12 @@ h1 {
 }
 
 .loseScreen {
-  background-image: url(./f1-lose.png);
+  background-image: url(/f1-lose.png);
   background-position: center + 40px;
 }
 
 .winScreen {
-  background-image: url(./f1-win.png);
+  background-image: url(/f1-win.png);
   background-position: center;
 }
 
@@ -203,7 +203,7 @@ h1 {
 
 .githubBut {
   right: 20px;
-  background-image: url(./github.svg);
+  background-image: url(/github.svg);
 }
 .butDescGH {
   width: 50px;
@@ -234,19 +234,19 @@ h1 {
 }
 
 .truemusic {
-  background-image: url(./musicOn.svg);
+  background-image: url(/musicOn.svg);
 }
 
 .falsemusic {
-  background-image: url(./musicOff.svg);
+  background-image: url(/musicOff.svg);
 }
 
 .trueSound {
-  background-image: url(./soundOn.svg);
+  background-image: url(/soundOn.svg);
 }
 
 .falseSound {
-  background-image: url(./soundOff.svg);
+  background-image: url(/soundOff.svg);
 }
 
 @keyframes fadeIn {

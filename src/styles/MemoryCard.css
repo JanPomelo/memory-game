@@ -46,7 +46,6 @@
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Reset the box shadow */
 }
 
-
 .front,
 .back {
   position: absolute;
@@ -65,7 +64,7 @@
   width: 95%;
   height: 100%;
   align-self: center;
-  background-image: url(./output-onlinejpgtools.png);
+  background-image: url(/output-onlinejpgtools.png);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -73,7 +72,7 @@
 }
 
 .bigLogo {
-  background-image: url(./F1.svg);
+  background-image: url(/F1.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -215,7 +214,7 @@
 
 .f1Logo {
   position: absolute;
-  background: url(./F1.svg);
+  background: url(/F1.svg);
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
