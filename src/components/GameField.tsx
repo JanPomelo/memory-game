@@ -4,13 +4,15 @@ import GameFieldProps from "../interfaces/GameFieldProps";
 import { Driver } from "../types";
 import LooseScreen from "./LooseScreen";
 import WinScreen from "./WinScreen";
+import flipCard from "../assets/flipCard.mp3";
+const cardSound = new Audio(flipCard);
 
 const GameField: React.FC<GameFieldProps> = ({ playArr, onStartPageClick }) => {
   const [gameArray, setGameArray] = useState(playArr);
   const [backTurn, setBackTurn] = useState("");
   const [score, setScore] = useState(0);
   const [end, setEnd] = useState("");
-
+  
   const newGameArr = [...gameArray];
 
   function shuffleArray(array: Driver[]) {
@@ -33,6 +35,7 @@ const GameField: React.FC<GameFieldProps> = ({ playArr, onStartPageClick }) => {
         newGameArr[i].clicked = true;
       }
     }
+    cardSound.play();
     setBackTurn("backTurn");
     if (!alreadyClicked) {
       if (score + 1 >= newGameArr.length) {
@@ -40,11 +43,12 @@ const GameField: React.FC<GameFieldProps> = ({ playArr, onStartPageClick }) => {
         setEnd("win");
       } else {
         setTimeout(() => {
+          cardSound.play();
           shuffleArray(newGameArr);
           setGameArray(newGameArr);
           setBackTurn("");
           setScore(score + 1);
-        }, 1000);
+        }, 1200);
       }
     } else {
       setEnd("lose");

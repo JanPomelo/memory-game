@@ -5,11 +5,13 @@ import StartScreen from "./components/StartScreen";
 import { useState } from "react";
 import GameScreen from "./components/GameScreen";
 import sound from "./assets/backGround.mp3";
-
+import startSound from './assets/startSound.mp3'
 const bgMusic = new Audio(sound);
+const start = new Audio(startSound);
+
 function play() {
   bgMusic.loop = true;
-  bgMusic.volume = 0.03;
+  bgMusic.volume = 0.2;
   bgMusic.play();
 }
 
@@ -32,6 +34,7 @@ function App() {
   }
 
   function handleClick(e: React.MouseEvent<HTMLButtonElement>, dif: string) {
+    start.play();
     let selectedColor = "";
     const div = document.getElementById("startDiv") as HTMLDivElement;
     div.style.visibility = "hidden";
