@@ -1,5 +1,3 @@
-"use strict";
-
 import "../styles/Startpage.css";
 import StartScreenProps from "../interfaces/StartScreenProps";
 import { useEffect, useState } from "react";

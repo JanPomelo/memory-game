@@ -1,5 +1,3 @@
-"use strict";
-
 import "./styles/App.css";
 import StartScreen from "./components/StartScreen";
 import { useState } from "react";

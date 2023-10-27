@@ -1,5 +1,3 @@
-"use strict";
-
 import LooseScreenProps from "../interfaces/LooseScreenProps";
 
 const WinScreen: React.FC<LooseScreenProps> = ({ onRetryClick, onStartPageClick }) => {

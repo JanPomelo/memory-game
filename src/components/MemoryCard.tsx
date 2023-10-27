@@ -1,4 +1,3 @@
-"use strict";
 
 import "../styles/MemoryCard.css";
 import MemoryCardProps from "../interfaces/MemoryCard";

@@ -1,12 +1,13 @@
 import GameScreenProps from "../interfaces/GameScreenProps";
-import { fakeDrivers } from "../drivers";
+import { drivers } from "../drivers";
 import { Driver } from "../types";
 import GameField from "./GameField";
 import { useEffect, useState } from "react";
 import LoadingTyre from "./LoadingTyre";
+import { getDriverDetails } from "../apiCalls";
 
 const GameScreen: React.FC<GameScreenProps> = ({ difficulty, tyre, onStartPageClick, sound }) => {
-  const [imgsLoaded, setImgsLoaded] = useState(false);
+  const [playArr, setPlayArr] = useState([] as Driver[]);
 
   function getCardArraySize(dif: string): number {
     switch (dif) {
@@ -20,30 +21,40 @@ const GameScreen: React.FC<GameScreenProps> = ({ difficulty, tyre, onStartPageCl
         return 0;
     }
   }
+  const arrSize = getCardArraySize(difficulty);
 
-  function getPlayCards() {
-    const arrSize: number = getCardArraySize(difficulty);
-    const playArr: Driver[] = [];
-    for (let i = 0; i < arrSize; i++) {
-      let driver: Driver;
-      let alreadyIn = false;
-      do {
-        alreadyIn = false;
-        driver = fakeDrivers[Math.floor(Math.random() * 20)];
-        for (let j = 0; j < playArr.length; j++) {
-          if (driver.strPlayer === playArr[j].strPlayer) {
-            alreadyIn = true;
+  useEffect(() => {
+    async function driverArray() {
+      const gameArr = [] as Driver[];
+      let driver;
+      for (let i = 0; i < arrSize; i++) {
+        let alreadyIn = false;
+        do {
+          alreadyIn = false;
+          driver = await getDriverDetails(drivers[Math.floor(Math.random() * 20)]);
+          if (driver) {
+            for (let j = 0; j < gameArr.length; j++) {
+              if (driver.strPlayer === gameArr[j].strPlayer) {
+                alreadyIn = true;
+              }
+            }
+          } else {
+            console.log("Failed to fetch Driver information!");
           }
+        } while (alreadyIn);
+        if (driver) {
+          gameArr.push(driver);
         }
-      } while (alreadyIn);
-      playArr.push(driver);
-      console.log(alreadyIn);
+      }
+      setPlayArr(gameArr);
     }
-    return playArr;
-  }
+    driverArray();
 
-  const playArr = getPlayCards();
-
+    return () => {
+      setPlayArr([] as Driver[]);
+    };
+  }, [arrSize, difficulty]);
+  /*
   useEffect(() => {
     const loadImg = (image: Driver) => {
       return new Promise((resolve, reject) => {
@@ -62,10 +73,10 @@ const GameScreen: React.FC<GameScreenProps> = ({ difficulty, tyre, onStartPageCl
       .then(() => setImgsLoaded(true))
       .catch((err) => console.log("Failed to load images", err));
   }, [playArr]);
-
+*/
   return (
     <>
-      {imgsLoaded ? (
+      {playArr.length === arrSize ? (
         <GameField sound={sound} playArr={playArr} onStartPageClick={onStartPageClick} />
       ) : (
         <LoadingTyre color={tyre.color} tyreType={tyre.tyreType} />
