@@ -108,6 +108,9 @@ function App() {
       <span className="butDescmusic">Music</span>
       <button className={sound + "Sound soundButton"} onClick={controlSound}></button>
       <span className="butDescsound">SFX</span>
+      <a href="https://www.github.com/janpomelo/memory-game" target="_blank" className="githubBut">
+      </a>
+      <span className="butDescGH">GitHub & Credits</span>
     </div>
   );
 }
