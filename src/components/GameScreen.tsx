@@ -5,9 +5,9 @@ import GameField from "./GameField";
 import { useEffect, useState } from "react";
 import LoadingTyre from "./LoadingTyre";
 
-const GameScreen: React.FC<GameScreenProps> = ({ difficulty, tyre, onStartPageClick }) => {
+const GameScreen: React.FC<GameScreenProps> = ({ difficulty, tyre, onStartPageClick, sound }) => {
   const [imgsLoaded, setImgsLoaded] = useState(false);
-  
+
   function getCardArraySize(dif: string): number {
     switch (dif) {
       case "soft":
@@ -63,7 +63,15 @@ const GameScreen: React.FC<GameScreenProps> = ({ difficulty, tyre, onStartPageCl
       .catch((err) => console.log("Failed to load images", err));
   }, [playArr]);
 
-  return <>{imgsLoaded ? <GameField playArr={playArr} onStartPageClick={onStartPageClick}/> : <LoadingTyre color={tyre.color} tyreType={tyre.tyreType} />}</>;
+  return (
+    <>
+      {imgsLoaded ? (
+        <GameField sound={sound} playArr={playArr} onStartPageClick={onStartPageClick} />
+      ) : (
+        <LoadingTyre color={tyre.color} tyreType={tyre.tyreType} />
+      )}
+    </>
+  );
 };
 
 export default GameScreen;

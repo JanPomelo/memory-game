@@ -158,30 +158,63 @@ h1 {
   border-radius: 1rem;
 }
 
-.musicButton {
+.musicButton,
+.soundButton, .butDescmusic, .butDescsound {
   position: fixed;
-  left: 20px;
-  bottom: 20px;
   width: 32px;
-  height: 32px;
+}
+
+.musicButton, .soundButton {
   border: #213547 solid 1px;
   border-radius: 50%;
   background-color: white;
+  height: 32px;
+  bottom: 20px;
+}
+
+.butDescmusic, .butDescsound {
+  bottom: 10px;
+  color: white;
+  font-size: 0.5rem;
+}
+
+.butDescmusic {
+  left: 20px;
+}
+
+.butDescsound {
+  left: 57px;
+}
+.musicButton {
+  left: 20px;
+}
+
+.soundButton {
+  left: 57px;
+}
+
+.truemusic,
+.falsemusic, .trueSound, .falseSound {
+  background-position: center;
+  background-size: contain;
+  background-size: 20px;
+  background-repeat: no-repeat;
 }
 
 .truemusic {
   background-image: url(./musicOn.svg);
-  background-position: center;
-  background-size: contain;
-  background-size: 20px;
-  background-repeat: no-repeat;
 }
+
 .falsemusic {
   background-image: url(./musicOff.svg);
-  background-position: center;
-  background-size: contain;
-  background-size: 20px;
-  background-repeat: no-repeat;
+}
+
+.trueSound {
+  background-image: url(./soundOn.svg);
+}
+
+.falseSound {
+  background-image: url(./soundOff.svg);
 }
 
 @keyframes fadeIn {

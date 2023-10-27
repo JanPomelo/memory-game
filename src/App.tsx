@@ -5,7 +5,7 @@ import StartScreen from "./components/StartScreen";
 import { useState } from "react";
 import GameScreen from "./components/GameScreen";
 import sound from "./assets/backGround.mp3";
-import startSound from './assets/startSound.mp3'
+import startSound from "./assets/startSound.mp3";
 const bgMusic = new Audio(sound);
 const start = new Audio(startSound);
 
@@ -23,6 +23,8 @@ function App() {
   const [difficulty, setDifficulty] = useState("");
   const [tyre, setTyre] = useState({ tyreType: "", color: "" });
   const [music, setMusic] = useState(false);
+  const [sound, setSound] = useState(true);
+
   function controlMusic() {
     if (music) {
       stop();
@@ -33,8 +35,18 @@ function App() {
     }
   }
 
+  function controlSound() {
+    if (sound) {
+      setSound(false);
+    } else {
+      setSound(true);
+    }
+  }
+
   function handleClick(e: React.MouseEvent<HTMLButtonElement>, dif: string) {
-    start.play();
+    if (sound) {
+      start.play();
+    }
     let selectedColor = "";
     const div = document.getElementById("startDiv") as HTMLDivElement;
     div.style.visibility = "hidden";
@@ -84,6 +96,7 @@ function App() {
         />
       ) : (
         <GameScreen
+          sound={sound}
           difficulty={difficulty}
           tyre={tyre}
           onStartPageClick={() => {
@@ -92,6 +105,9 @@ function App() {
         />
       )}
       <button className={music + "music musicButton"} onClick={controlMusic}></button>
+      <span className="butDescmusic">Music</span>
+      <button className={sound + "Sound soundButton"} onClick={controlSound}></button>
+      <span className="butDescsound">SFX</span>
     </div>
   );
 }

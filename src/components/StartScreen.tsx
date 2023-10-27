@@ -7,7 +7,7 @@ import TyreButton from "./TyreButton";
 
 //const allDetails = fakeDrivers;
 
-const StartScreen: React.FC<StartScreenProps> = ({ onSoftClick, onMediumClick, onHardClick }) => {
+const StartScreen: React.FC<StartScreenProps> = ({ onSoftClick, onMediumClick, onHardClick}) => {
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
