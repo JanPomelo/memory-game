@@ -159,12 +159,18 @@ h1 {
 }
 
 .musicButton,
-.soundButton, .butDescmusic, .butDescsound, .githubBut, .butDescGH {
+.soundButton,
+.butDescmusic,
+.butDescsound,
+.githubBut,
+.butDescGH {
   position: fixed;
   width: 32px;
 }
 
-.musicButton, .soundButton, .githubBut {
+.musicButton,
+.soundButton,
+.githubBut {
   border: #213547 solid 1px;
   border-radius: 50%;
   background-color: white;
@@ -172,7 +178,9 @@ h1 {
   top: 20px;
 }
 
-.butDescmusic, .butDescsound, .butDescGH {
+.butDescmusic,
+.butDescsound,
+.butDescGH {
   top: 10px;
   color: white;
   font-size: 0.5rem;
@@ -203,8 +211,22 @@ h1 {
   top: 3px;
 }
 
+.roundBut {
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.roundBut:hover,
+.roundBut:focus {
+  outline: none;
+  transform: rotate(15deg);
+  background-color: #03cef1;
+}
+
 .truemusic,
-.falsemusic, .trueSound, .falseSound, .githubBut {
+.falsemusic,
+.trueSound,
+.falseSound,
+.githubBut {
   background-position: center;
   background-size: contain;
   background-size: 20px;
