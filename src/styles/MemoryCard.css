@@ -29,7 +29,8 @@
   border-radius: 1rem;
 }
 
-.outerMemCardWrapper:focus {
+.outerMemCardWrapper:focus,
+.outerMemCardWrapper:active {
   outline: none;
   border: none;
   box-shadow: 0px 0px 5px 3px #03cef1, 0px 0px 5px 1px rgba(255, 215, 0, 0.5); /* Glowing box shadow with golden color */

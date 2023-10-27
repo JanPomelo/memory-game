@@ -85,7 +85,8 @@ h1 {
 }
 
 .backToStartPageButton:focus,
-.loseButtons:focus {
+.backToStartPageButton:active .loseButtons:focus,
+.loseButtons:active {
   transform: scale(1.1);
   box-shadow: 0px 0px 5px 3px #03cef1, 0px 0px 5px 1px rgba(255, 215, 0, 0.5);
   outline: none;
@@ -216,12 +217,12 @@ h1 {
   transition: transform 0.3s, background-color 0.3s;
 }
 
-.roundBut:focus {
+.roundBut:focus,
+.roundBut:active {
   outline: none;
   transform: rotate(15deg);
   background-color: #03cef1;
 }
-
 
 .truemusic,
 .falsemusic,
