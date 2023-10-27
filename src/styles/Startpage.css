@@ -176,22 +176,11 @@ button > * {
   border-radius: 50%;
   width: 50px;
   height: 50px;
-  border: dashed black 5.8px;
+  border: dashed black 5px;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0;
-}
-.rimHoles2 {
-  border-radius: 50%;
-  width: 39px;
-  height: 39px;
-  border: dashed black 4px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
-  margin: 0;
 }
 
 .rimHolesAbs {
@@ -202,24 +191,13 @@ button > * {
   border-radius: 50%;
   width: 50px;
   height: 50px;
-  border: dashed rgb(49, 49, 49) 5.8px;
+  border: dashed rgb(49, 49, 49) 5px;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0;
 }
-.rimHoles2Abs {
-  border-radius: 50%;
-  width: 38.6px;
-  height: 38.6px;
-  border: dashed rgb(49, 49, 49) 4px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
-  padding: 0;
-  margin: 0;
-}
 
 .yellowRing {
   border: 2px yellow solid;
@@ -248,25 +226,24 @@ button > * {
 }
 
 .selectedLoading {
-  transform: scale(1.5, 1.5);
+  transform: scale(1.5, 1.5) ;
   background-color: transparent !important;
   box-shadow: none;
   visibility: visible;
 }
 
-.selected > .tyreButton,
-.selectedLoading > .tyreButton {
+.selected > .tyreButton, .selectedLoading > .tyreButton {
   animation-name: runTyre;
   animation-duration: 1.2s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
 .selectedSoft {
-  transform: scale(1.5, 1.5) translateX(73%) translateY(-45.5%);
+  transform: scale(1.5, 1.5) translateX(73%) translateY(-45.5%);;
 }
 
 .selectedHard {
-  transform: scale(1.5, 1.5) translateX(-73.5%) translateY(-45.5%);
+  transform: scale(1.5, 1.5) translateX(-73.5%) translateY(-45.5%);;
 }
 
 .startPageButton:hover .tyreButton,

@@ -9,14 +9,11 @@ const TyreButton: React.FC<TyreButtonProps> = ({ onClick, tyreType, color }) => 
         <div className={"tyreText " + tyreType.toLowerCase() +"Tyre"}>
           <div className="rim">
             <div className="rimHoles">
-              <div className="rimHoles2">
                 <div className="yellowRing">
                   <div className="whiteRing"></div>
                 </div>
-              </div>
             </div>
             <div className="rimHolesAbs">
-              <div className="rimHoles2Abs"></div>
             </div>
           </div>
         </div>
