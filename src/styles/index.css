@@ -84,9 +84,7 @@ h1 {
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.backToStartPageButton:hover,
 .backToStartPageButton:focus,
-.loseButtons:hover,
 .loseButtons:focus {
   transform: scale(1.1);
   box-shadow: 0px 0px 5px 3px #03cef1, 0px 0px 5px 1px rgba(255, 215, 0, 0.5);
@@ -218,12 +216,12 @@ h1 {
   transition: transform 0.3s, background-color 0.3s;
 }
 
-.roundBut:hover,
 .roundBut:focus {
   outline: none;
   transform: rotate(15deg);
   background-color: #03cef1;
 }
+
 
 .truemusic,
 .falsemusic,
@@ -283,5 +281,19 @@ h1 {
   }
   a:hover {
     color: #747bff;
+  }
+}
+
+@media (hover: hover) {
+  .roundBut:hover {
+    outline: none;
+    transform: rotate(15deg);
+    background-color: #03cef1;
+  }
+  .backToStartPageButton:hover,
+  .loseButtons:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 5px 3px #03cef1, 0px 0px 5px 1px rgba(255, 215, 0, 0.5);
+    outline: none;
   }
 }

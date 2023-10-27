@@ -25,7 +25,9 @@ function App() {
   const [music, setMusic] = useState(false);
   const [sound, setSound] = useState(true);
 
-  function controlMusic() {
+  function controlMusic(e: React.MouseEvent<HTMLButtonElement>) {
+    const button = e.target as HTMLButtonElement;
+    button.blur();
     if (music) {
       stop();
       setMusic(false);
@@ -35,7 +37,9 @@ function App() {
     }
   }
 
-  function controlSound() {
+  function controlSound(e: React.MouseEvent<HTMLButtonElement>) {
+    const button = e.target as HTMLButtonElement;
+    button.blur();
     if (sound) {
       setSound(false);
     } else {
@@ -110,7 +114,15 @@ function App() {
       <span className="butDescsound">SFX</span>
       <button className={sound + "Sound soundButton roundBut"} onClick={controlSound}></button>
       <span className="butDescGH">GitHub & Credits</span>
-      <a href="https://www.github.com/janpomelo/memory-game" target="_blank" className="githubBut roundBut"></a>
+      <a
+        href="https://www.github.com/janpomelo/memory-game"
+        target="_blank"
+        onClick={(e) => {
+          const a = e.target as HTMLAnchorElement;
+          a.blur();
+        }}
+        className="githubBut roundBut"
+      ></a>
     </div>
   );
 }
