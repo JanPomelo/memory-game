@@ -2,7 +2,7 @@
 
 import "../styles/MemoryCard.css";
 import MemoryCardProps from "../interfaces/MemoryCard";
-//http://res.cloudinary.com/dsb37ne9e/image/fetch/w_150/"
+
 const MemoryCard: React.FC<MemoryCardProps> = ({
   driverName,
   driverNumber,
@@ -20,7 +20,7 @@ const MemoryCard: React.FC<MemoryCardProps> = ({
             <div className="memCard">
               <div className="imgWrapper">
                 <div className="f1Logo"></div>
-                <img src={imageSrc} />
+                <img src={"http://res.cloudinary.com/dsb37ne9e/image/fetch/w_150/" + imageSrc} />
                 <div className="imgGradient1"></div>
                 <div className="imgGradient2"></div>
               </div>

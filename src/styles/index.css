@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: "F1Font";
-  src: url(/Formula1-Wide.otf);
+  src: url(/formula1-wide-webfont.woff);
 }
 
 :root {
@@ -30,7 +30,7 @@
   position: fixed;
   left: 0;
   top: 0;
-  background-image: url(/bg.png);
+  background-image: url(/bg.webp);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -94,8 +94,8 @@ h1 {
 
 .endScreen {
   position: absolute;
-  right: calc(50vw - 153px);
-  top: calc(50vh - 153px);
+  right: calc(50% - 153px);
+  top: calc(50% - 153px);
   background-color: white;
   z-index: 9999;
   height: 306px;
