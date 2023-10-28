@@ -24,6 +24,8 @@
   --memCardBG: black;
   --memCardBorder: #c0c0c0;
   --memCardHighlight: #ff0000;
+  color: #213547;
+  background-color: #ffffff;
 }
 
 #bgImage {
@@ -157,6 +159,7 @@ h1 {
   background-color: white;
   padding: 0.8rem;
   border-radius: 1rem;
+  color: black;
 }
 
 .musicButton,
@@ -272,16 +275,6 @@ h1 {
 @media screen and (min-width: 1280px) {
   #bgImage {
     left: calc(50vw - 640px);
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
   }
 }
 
