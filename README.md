@@ -23,7 +23,7 @@ Furthermore, it was a good refresher on how to handle API calls.
 ## Preview
 
 https://f1-memory-game.vercel.app/
-![][https://janpomelo.com/f1-memory.webp]
+![](https://janpomelo.com/f1-memory.webp)
 
 ## Credits
 
