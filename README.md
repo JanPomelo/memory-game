@@ -23,7 +23,9 @@ Furthermore, it was a good refresher on how to handle API calls.
 ## Preview
 
 https://f1-memory-game.vercel.app/
-![](https://janpomelo.com/f1-memory.webp)
+<br>
+<br>
+<img src="https://www.janpomelo.com/f1-memory.webp" width="50%" max-width=600px/> 
 
 ## Credits
 
