@@ -11,10 +11,10 @@ Moreover, I used Interfaces for the first time to handle PropTypes, which offere
 Furthermore, it was a good refresher on how to handle API calls.
 
 ### Tools used
-
-- React
-- TypeScript
-- Vite.js
+- <img src="https://www.svgrepo.com/show/452092/react.svg" height=12px /> React.js
+- <img src="https://www.svgrepo.com/show/374118/tailwind.svg" height=12px /> Tailwind CSS 
+- <img src="https://www.svgrepo.com/show/374146/typescript-official.svg" height=12px /> TypeScript
+- <img src="https://www.svgrepo.com/show/374167/vite.svg" height=12px /> Vite.js
 
 ### Future Implementations
 
